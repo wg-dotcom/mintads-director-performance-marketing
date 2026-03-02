@@ -1,0 +1,1578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Director of Performance Marketing · MintAds | Sagan White Glove</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --mint:         #00C896;
+            --mint-soft:    #33D6A8;
+            --mint-deep:    #009972;
+            --mint-glow:    rgba(0, 200, 150, 0.10);
+            --mint-border:  rgba(0, 200, 150, 0.30);
+            --dark:         #0A0F1A;
+            --darker:       #060C14;
+            --darkest:      #030810;
+            --white:        #FFFFFF;
+            --light:        #F4F7F5;
+            --gray:         #6B7A8A;
+            --gray-light:   #E3E9E6;
+            --gray-dark:    #374151;
+            --red-soft:     #FF6B6B;
+            --yellow-soft:  #F5C842;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark);
+            background: var(--white);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ═══════════════════════════════════
+           HERO
+        ═══════════════════════════════════ */
+        .hero {
+            background: var(--darker);
+            color: var(--white);
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -180px;
+            right: -200px;
+            width: 640px;
+            height: 640px;
+            background: radial-gradient(circle, rgba(0,200,150,0.07) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-top-bar {
+            background: var(--mint);
+            height: 4px;
+            width: 100%;
+        }
+
+        .hero-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 40px 70px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-brand {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 50px;
+            opacity: 0;
+            animation: fadeUp 0.8s ease forwards;
+        }
+
+        .hero-brand .logo-text {
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--white);
+        }
+
+        .hero-brand .logo-accent {
+            width: 36px;
+            height: 3px;
+            background: var(--mint);
+            border-radius: 2px;
+        }
+
+        .hero-brand .logo-by {
+            font-size: 12px;
+            color: rgba(255,255,255,0.28);
+            font-weight: 400;
+            letter-spacing: 0.3px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--mint-glow);
+            border: 1px solid var(--mint-border);
+            color: var(--mint-soft);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 8px 20px;
+            border-radius: 100px;
+            margin-bottom: 28px;
+            opacity: 0;
+            animation: fadeUp 0.8s ease 0.15s forwards;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            font-weight: 300;
+            line-height: 1.15;
+            letter-spacing: 0.3px;
+            margin-bottom: 24px;
+            opacity: 0;
+            animation: fadeUp 0.8s ease 0.3s forwards;
+        }
+
+        .hero h1 strong {
+            font-weight: 800;
+            color: var(--mint-soft);
+        }
+
+        .hero-subtitle {
+            font-size: 16px;
+            font-weight: 400;
+            color: rgba(255,255,255,0.52);
+            max-width: 640px;
+            line-height: 1.85;
+            opacity: 0;
+            animation: fadeUp 0.8s ease 0.45s forwards;
+        }
+
+        .hero-meta {
+            display: flex;
+            gap: 40px;
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255,255,255,0.07);
+            opacity: 0;
+            animation: fadeUp 0.8s ease 0.6s forwards;
+            flex-wrap: wrap;
+        }
+
+        .hero-meta-item { display: flex; flex-direction: column; gap: 5px; }
+
+        .hero-meta-label {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--mint-soft);
+        }
+
+        .hero-meta-value {
+            font-size: 14px;
+            color: rgba(255,255,255,0.68);
+            font-weight: 400;
+        }
+
+        /* ═══════════════════════════════════
+           FADE-IN
+        ═══════════════════════════════════ */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(18px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ═══════════════════════════════════
+           EDITORIAL
+        ═══════════════════════════════════ */
+        .editorial {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 80px 40px;
+        }
+
+        .editorial-label {
+            font-size: 10.5px;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--mint);
+            margin-bottom: 20px;
+        }
+
+        .editorial h2 {
+            font-size: 34px;
+            font-weight: 600;
+            letter-spacing: -0.2px;
+            margin-bottom: 28px;
+            color: var(--dark);
+            line-height: 1.25;
+        }
+
+        .editorial p {
+            font-size: 16px;
+            line-height: 1.9;
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+
+        .editorial p strong { color: var(--dark); font-weight: 600; }
+
+        .editorial-divider {
+            width: 48px;
+            height: 3px;
+            background: var(--mint);
+            border-radius: 2px;
+            margin: 44px 0;
+        }
+
+        .must-haves-block {
+            background: #F0FBF7;
+            border: 1px solid rgba(0,200,150,0.2);
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin-top: 8px;
+        }
+
+        .must-haves-block h4 {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--mint-deep);
+            margin-bottom: 14px;
+        }
+
+        .must-haves-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            list-style: none;
+        }
+
+        .must-haves-list li {
+            background: var(--white);
+            border: 1px solid rgba(0,200,150,0.25);
+            border-radius: 6px;
+            padding: 5px 13px;
+            font-size: 13px;
+            color: var(--gray-dark);
+            font-weight: 500;
+        }
+
+        /* ═══════════════════════════════════
+           CANDIDATES SECTION
+        ═══════════════════════════════════ */
+        .candidates-section {
+            background: var(--light);
+            padding: 80px 0 100px;
+        }
+
+        .candidates-header {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 40px;
+            margin-bottom: 52px;
+        }
+
+        .candidates-header .section-label {
+            font-size: 10.5px;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--mint);
+            margin-bottom: 14px;
+        }
+
+        .candidates-header h2 {
+            font-size: 34px;
+            font-weight: 600;
+            letter-spacing: -0.2px;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .candidates-header p {
+            font-size: 15px;
+            color: var(--gray);
+            max-width: 640px;
+        }
+
+        /* ─── Card wrapper ─── */
+        .candidate-card-wrap {
+            max-width: 1100px;
+            margin: 0 auto 32px;
+            padding: 0 40px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 8px 28px rgba(0,0,0,0.06);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            border-left: 4px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 16px 48px rgba(0,0,0,0.09);
+        }
+
+        .card.rank-1 { border-left-color: var(--mint); }
+        .card.rank-2 { border-left-color: #33D6A8; }
+        .card.rank-3 { border-left-color: #66E2BC; }
+        .card.rank-4 { border-left-color: #CCD8D0; }
+        .card.rank-5 { border-left-color: #CCD8D0; }
+        .card.rank-6 { border-left-color: #E0E0E0; }
+        .card.rank-7 { border-left-color: #E0E0E0; }
+
+        /* ─── Card header bar ─── */
+        .card-top {
+            background: var(--darker);
+            padding: 30px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 24px;
+        }
+
+        .card-identity { display: flex; align-items: center; gap: 18px; }
+
+        .card-avatar {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: var(--mint);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--darker);
+            flex-shrink: 0;
+        }
+
+        .card-name-group { display: flex; flex-direction: column; gap: 4px; }
+
+        .card-name {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: -0.2px;
+        }
+
+        .card-title-text {
+            font-size: 13px;
+            color: rgba(255,255,255,0.45);
+            font-weight: 400;
+        }
+
+        .card-top-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 8px;
+            flex-shrink: 0;
+        }
+
+        .rank-badge {
+            background: var(--mint);
+            color: var(--darker);
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 4px 14px;
+            border-radius: 100px;
+        }
+
+        .rank-badge.muted {
+            background: rgba(255,255,255,0.08);
+            color: rgba(255,255,255,0.45);
+        }
+
+        .fit-score {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 2px;
+        }
+
+        .fit-score-val {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--mint-soft);
+            line-height: 1;
+        }
+
+        .fit-score-val.warn { color: var(--yellow-soft); }
+        .fit-score-val.low  { color: rgba(255,255,255,0.3); }
+
+        .fit-score-label {
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.28);
+        }
+
+        /* ─── Card body ─── */
+        .card-body { padding: 36px 40px; }
+
+        .card-meta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .meta-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            border-radius: 6px;
+            padding: 5px 13px;
+            font-size: 12.5px;
+            font-weight: 600;
+        }
+
+        .pill-location {
+            background: #F0F4F8;
+            color: var(--gray-dark);
+        }
+
+        .pill-salary {
+            background: #E8FBF4;
+            color: var(--mint-deep);
+            border: 1px solid rgba(0,200,150,0.2);
+        }
+
+        .pill-salary.over-budget {
+            background: #FEF9EC;
+            color: #B07A00;
+            border: 1px solid rgba(245,200,66,0.3);
+        }
+
+        .pill-exp {
+            background: #F0F4F8;
+            color: var(--gray-dark);
+        }
+
+        .card-summary {
+            font-size: 15px;
+            line-height: 1.85;
+            color: var(--gray);
+            margin-bottom: 28px;
+        }
+
+        .card-summary strong { color: var(--dark); font-weight: 600; }
+
+        /* ─── Highlights grid ─── */
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 12px 16px;
+            background: var(--light);
+            border-radius: 8px;
+            border: 1px solid var(--gray-light);
+        }
+
+        .highlight-arrow {
+            color: var(--mint);
+            font-weight: 800;
+            font-size: 14px;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .highlight-text {
+            font-size: 13px;
+            color: var(--gray-dark);
+            line-height: 1.5;
+        }
+
+        .highlight-text strong {
+            color: var(--dark);
+            font-weight: 600;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        /* ─── Fit analysis bar ─── */
+        .fit-analysis {
+            background: #F8FAFB;
+            border: 1px solid var(--gray-light);
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin-bottom: 20px;
+        }
+
+        .fit-analysis-header {
+            font-size: 10.5px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gray);
+            margin-bottom: 16px;
+        }
+
+        .fit-bars-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        .fit-bar-row { display: flex; flex-direction: column; gap: 5px; }
+
+        .fit-bar-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .fit-bar-label {
+            font-size: 11.5px;
+            color: var(--gray);
+            font-weight: 500;
+        }
+
+        .fit-bar-pct {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--gray-dark);
+            font-variant-numeric: tabular-nums;
+        }
+
+        .bar-track {
+            height: 5px;
+            background: var(--gray-light);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: 3px;
+            background: var(--mint);
+        }
+
+        .bar-fill.warn { background: var(--yellow-soft); }
+        .bar-fill.low  { background: #E0E0E0; }
+
+        /* ─── Verdict + Gap ─── */
+        .verdict-row {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .verdict {
+            flex: 1;
+            min-width: 200px;
+            border-radius: 8px;
+            padding: 12px 16px;
+            font-size: 13px;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        .verdict.strong {
+            background: #E8FBF4;
+            border: 1px solid rgba(0,200,150,0.25);
+            color: var(--mint-deep);
+        }
+
+        .verdict.good {
+            background: #F0FBF7;
+            border: 1px solid rgba(0,200,150,0.18);
+            color: #008C6E;
+        }
+
+        .verdict.partial {
+            background: #FEF9EC;
+            border: 1px solid rgba(245,200,66,0.3);
+            color: #856A00;
+        }
+
+        .verdict.low-fit {
+            background: #FFF5F5;
+            border: 1px solid rgba(255,107,107,0.25);
+            color: #C0392B;
+        }
+
+        .gap-note {
+            flex: 1;
+            min-width: 200px;
+            background: #FFF9F0;
+            border: 1px solid rgba(245,173,66,0.3);
+            border-radius: 8px;
+            padding: 12px 16px;
+            font-size: 12.5px;
+            color: #8A6A00;
+            line-height: 1.6;
+        }
+
+        .gap-note::before {
+            content: '⚠ ';
+            font-size: 12px;
+        }
+
+        /* ─── Card footer ─── */
+        .card-footer {
+            border-top: 1px solid var(--gray-light);
+            padding: 14px 40px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            background: #FAFBFA;
+        }
+
+        .footer-label {
+            font-size: 11px;
+            color: var(--gray);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-right: 4px;
+        }
+
+        .score-badge {
+            font-size: 11.5px;
+            padding: 3px 11px;
+            border-radius: 5px;
+            font-weight: 700;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .score-a { background: #E8FBF4; color: var(--mint-deep); }
+        .score-b { background: #F0F4F8; color: var(--gray-dark); }
+        .score-c { background: #F4F4F4; color: var(--gray); }
+
+        .linkedin-btn {
+            margin-left: auto;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--mint-deep);
+            text-decoration: none;
+            border-bottom: 1px dashed rgba(0,153,114,0.4);
+            transition: color 0.15s;
+        }
+
+        .linkedin-btn:hover { color: var(--mint); }
+
+        /* ═══════════════════════════════════
+           FOOTER
+        ═══════════════════════════════════ */
+        footer {
+            background: var(--darker);
+            border-top: 4px solid var(--mint);
+            padding: 36px 40px;
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .footer-text {
+            font-size: 13px;
+            color: rgba(255,255,255,0.3);
+        }
+
+        .footer-brand {
+            font-size: 14px;
+            font-weight: 600;
+            color: rgba(255,255,255,0.6);
+        }
+
+        .footer-brand span { color: var(--mint); }
+
+        /* ═══════════════════════════════════
+           RESPONSIVE
+        ═══════════════════════════════════ */
+        @media (max-width: 900px) {
+            .hero h1 { font-size: 36px; }
+            .highlights-grid, .fit-bars-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 640px) {
+            .hero-inner, .card-body, .card-top { padding-left: 24px; padding-right: 24px; }
+            .candidate-card-wrap { padding: 0 16px; }
+            .hero h1 { font-size: 30px; }
+            .card-footer { flex-wrap: wrap; padding: 14px 24px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+<section class="hero">
+    <div class="hero-top-bar"></div>
+    <div class="hero-inner">
+
+        <div class="hero-brand">
+            <span class="logo-text">MintAds</span>
+            <div class="logo-accent"></div>
+            <span class="logo-by">Presented by Sagan White Glove</span>
+        </div>
+
+        <div class="hero-badge">Candidate Shortlist · HR35127</div>
+
+        <h1>Director of <strong>Performance Marketing</strong><br>
+        7 Candidates, Ranked.</h1>
+
+        <p class="hero-subtitle">
+            A high-volume affiliate and influencer operation processing 5,000–10,000 orders/day.
+            This is a builder-of-builders role — Americas coverage, 24/7 accountability,
+            and a team of 6–10 to grow and hold accountable.
+        </p>
+
+        <div class="hero-meta">
+            <div class="hero-meta-item">
+                <span class="hero-meta-label">Monthly Budget</span>
+                <span class="hero-meta-value">$4,000 – $5,000</span>
+            </div>
+            <div class="hero-meta-item">
+                <span class="hero-meta-label">Schedule</span>
+                <span class="hero-meta-value">Mon–Fri · Eastern hours</span>
+            </div>
+            <div class="hero-meta-item">
+                <span class="hero-meta-label">Daily Spend</span>
+                <span class="hero-meta-value">$100K+ / day</span>
+            </div>
+            <div class="hero-meta-item">
+                <span class="hero-meta-label">Channel</span>
+                <span class="hero-meta-value">Affiliates &amp; Influencers only</span>
+            </div>
+            <div class="hero-meta-item">
+                <span class="hero-meta-label">Stakeholders</span>
+                <span class="hero-meta-value">Chris Hopson &amp; JJ Davies</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ═══════════════════════════ EDITORIAL ═══════════════════════════ -->
+<section class="editorial fade-in">
+    <p class="editorial-label">About the company</p>
+    <h2>A DTC performance engine running at scale</h2>
+
+    <p>
+        MintAds operates a <strong>vertically integrated DTC supplements business</strong>
+        processing 5,000–10,000 orders per day across European and North American markets.
+        With over <strong>$100K in daily ad spend</strong> running entirely through affiliates and influencers
+        — zero Facebook, zero Google — MintAds has built a performance machine that few companies match in scale or speed.
+    </p>
+
+    <p>
+        The existing Director of Performance Marketing (Sofia-based, Dimitri) built the function from scratch,
+        but growth has outpaced a single operator in a single timezone. This hire is the <strong>second Director</strong>,
+        tasked with owning Americas coverage end-to-end: campaign managers, e-commerce specialists,
+        A/B testing cadences, multi-region offer management, and 24/7/365 accountability.
+    </p>
+
+    <p>
+        The right person is <strong>not a media buyer</strong>. They are a builder who manages builders —
+        someone with affiliate-driven growth in their DNA, P&amp;L instincts,
+        and the leadership range to hold a pod of 6–10 people accountable at full operational tempo.
+    </p>
+
+    <div class="editorial-divider"></div>
+
+    <div class="must-haves-block">
+        <h4>Must-haves for this role</h4>
+        <ul class="must-haves-list">
+            <li>7+ years in performance marketing</li>
+            <li>3+ years senior people management</li>
+            <li>Affiliate / influencer-driven experience</li>
+            <li>DTC or high-volume physical product background</li>
+            <li>Full P&amp;L ownership</li>
+            <li>Team of 6–10 direct reports</li>
+            <li>Americas timezone (EST standard)</li>
+            <li>Available evenings/weekends at director discretion</li>
+        </ul>
+    </div>
+</section>
+
+<!-- ═══════════════════════════ CANDIDATES ═══════════════════════════ -->
+<section class="candidates-section">
+
+    <div class="candidates-header fade-in">
+        <p class="section-label">Ranked by role fit</p>
+        <h2>The Shortlist</h2>
+        <p>7 candidates evaluated against MintAds' Director of Performance Marketing profile.
+           Ranked by fit to this specific role — affiliate-led, high-volume DTC, builder-leader.</p>
+    </div>
+
+    <!-- ─────────────────────────────────────────────
+         #1 — Jose Rios Mazuelos
+    ───────────────────────────────────────────── -->
+    <div class="candidate-card-wrap fade-in">
+        <div class="card rank-1">
+            <div class="card-top">
+                <div class="card-identity">
+                    <div class="card-avatar">JR</div>
+                    <div class="card-name-group">
+                        <span class="card-name">Jose Rios Mazuelos</span>
+                        <span class="card-title-text">Performance Marketing Leader · 10+ years</span>
+                    </div>
+                </div>
+                <div class="card-top-right">
+                    <span class="rank-badge">#1 Top Pick</span>
+                    <div class="fit-score">
+                        <span class="fit-score-val">85</span>
+                        <span class="fit-score-label">Role fit / 100</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="card-meta-row">
+                    <span class="meta-pill pill-location">🇵🇪 Peru</span>
+                    <span class="meta-pill pill-salary">$4,500 / month</span>
+                    <span class="meta-pill pill-exp">10+ yrs performance marketing</span>
+                </div>
+
+                <p class="card-summary">
+                    Performance marketing specialist with over a decade of experience driving measurable growth for high-volume consumer brands.
+                    Currently leading a team of 8 at Masco Peru with full P&amp;L accountability across annual budgets exceeding $1.2M.
+                    Delivered <strong>32% YoY CAC reduction</strong> and sustained <strong>ROAS of 3.5–6x</strong>.
+                    Peru (UTC-5) puts him perfectly in the Americas timezone window, and his $4,500 ask lands right in the target budget.
+                </p>
+
+                <div class="highlights-grid">
+                    <div class="highlight-item">
+                        <span class="highlight-arrow">→</span>
+                        <div class="highlight-text">
+                            <strong>CAC reduced 32% YoY</strong>
+                            Through funnel optimization and A/B testing at scale
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-arrow">→</span>
+                        <div class="highlight-text">
+                            <strong>ROAS 3.5–6x</strong>
+                            Sustained across multiple campaign cycles
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-arrow">→</span>
+                        <div class="highlight-text">
+                            <strong>Team of 8 direct reports</strong>
+                            Hiring, training, performance management
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-arrow">→</span>
+                        <div class="highlight-text">
+                            <strong>$1.2M+ annual budget ownership</strong>
+                            Full P&amp;L accountability
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-arrow">→</span>
+                        <div class="highlight-text">
+                            <strong>Analytics stack</strong>
+                            GA4, Looker Studio, Power BI, SQL
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-arrow">→</span>
+                        <div class="highlight-text">
+                            <strong>Americas timezone</strong>
+                            Peru (UTC-5) — full EST overlap
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fit-analysis">
+                    <p class="fit-analysis-header">Fit breakdown vs. MintAds requirements</p>
+                    <div class="fit-bars-grid">
+                        <div class="fit-bar-row">
+                            <div class="fit-bar-top">
+                                <span class="fit-bar-label">Affiliate / influencer exp.</span>
+                                <span class="fit-bar-pct">70%</span>
+                            </div>
+                            <div class="bar-track"><div class="bar-fill" style="width:70%"></div></div>
+                        </div>
+                        <div class="fit-bar-row">
+                            <div class="fit-bar-top">
+                                <span class="fit-bar-label">DTC / physical product</span>
+                                <span class="fit-bar-pct">85%</span>
+                            </div>
+                            <div class="bar-track"><div class="bar-fill" style="width:85%"></div></div>
+                        </div>
+                        <div class="fit-bar-row">
+                            <div class="fit-bar-top">
+                                <span class="fit-bar-label">People management (6–10)</span>
+                                <span class="fit-bar-pct">95%</span>
+                            </div>
+                            <div class="bar-track"><div class="bar-fill" style="width:95%"></div></div>
+                        </div>
+                        <div class="fit-bar-row">
+                            <div class="fit-bar-top">
+                                <span class="fit-bar-label">P&amp;L ownership</span>
+                                <span class="fit-bar-pct">95%</span>
+                            </div>
+                            <div class="bar-track"><div class="bar-fill" style="width:95%"></div></div>
+                        </div>
+                        <div class="fit-bar-row">
+                            <div class="fit-bar-top">
+                                <span class="fit-bar-label">Budget fit ($4–5K)</span>
+                                <span class="fit-bar-pct">95%</span>
+                            </div>
+                            <div class="bar-track"><div class="bar-fill" style="width:95%"></div></div>
+                        </div>
+                        <div class="fit-bar-row">
+                            <div class="fit-bar-top">
+                                <span class="fit-bar-label">Americas timezone</span>
+                                <span class="fit-bar-pct">100%</span>
+                            </div>
+                            <div class="bar-track"><div class="bar-fill" style="width:100%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="verdict-row">
+                    <div class="verdict strong">
+                        Strongest overall fit. Budget-aligned, team leadership proven, P&amp;L owner.
+                        Confirm affiliate channel depth in interview — everything else checks out.
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <span class="footer-label">Sagan AI scores</span>
+                <span class="score-badge score-a">A: 100</span>
+                <span class="score-badge score-b">B: 97</span>
+                <span class="score-badge score-c">C: 70 · Avg 89</span>
+                <a href="https://voca.ro/1bH7SRASmy1o" target="_blank" class="linkedin-btn">Portfolio ↗</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ─────────────────────────────────────────────
+         #2 — Anita Poletti
+    ───────────────────────────────────────────── -->
+    <div class="candidate-card-wrap fade-in">
+        <div class="card rank-2">
+            <div class="card-top">
+                <div class="card-identity">
+                    <div class="card-avatar">AP</div>
+                    <div class="card-name-group">
+                        <span class="card-name">Anita Poletti</span>
+                        <span class="card-title-text">Growth Marketing Leader · 10+ years</span>
+                    </div>
+                </div>
+                <div class="card-top-right">
+                    <span class="rank-badge">#2 Strong Candidate</span>
+                    <div class="fit-score">
+                        <span class="fit-score-val">68</span>
+                        <span class="fit-score-label">Role fit / 100</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="card-meta-row">
+                    <span class="meta-pill pill-location">🇦🇷 Argentina</span>
+                    <span class="meta-pill pill-salary over-budget">$5,500 / month</span>
+                    <span class="meta-pill pill-exp">10+ yrs growth marketing</span>
+                </div>
+
+                <p class="card-summary">
+                    Seasoned growth marketing leader with a strong track record across LATAM and US-facing roles.
+                    At Mana Tech she grew lead generation <strong>300%</strong>; at Coolbox she doubled e-commerce sales YoY
+                    with a <strong>268% ROAS</strong>. Proven in paid media strategy, CRM, A/B testing, and data-driven conversion
+                    optimization. Argentina (UTC-3) keeps her close to EST overlap. Salary ask is $500 above budget ceiling.
+                </p>
+
+                <div class="highlights-grid">
+                    <div class="highlight-item">
+                        <span class="highlight-arrow">→</span>
+                        <div class="highlight-text">
+                            <strong>268% ROAS at Coolbox</strong>
+                            Doubled YoY e-commerce sales (DTC brand)
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-arrow">→</span>
+                        <div class="highlight-text">
+                            <strong>300% lead gen growth</strong>
+                            At Mana Tech, US/Miami market
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-arrow">→</span>
+                        <div class="highlight-text">
+                            <strong>Meta, Google, CRM ownership</strong>
+                            Full-funnel paid media strategy
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-arrow">→</span>
+                        <div class="highlight-text">
+                            <strong>Webflow + A/B testing</strong>
+                            Strong CRO and conversion instincts
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fit-analysis">
+                    <p class="fit-analysis-header">Fit breakdown vs. MintAds requirements</p>
+                    <div class="fit-bars-grid">
+                        <div class="fit-bar-row">
+                            <div class="fit-bar-top">
+                                <span class="fit-bar-label">Affiliate / influencer exp.</span>
+                                <span class="fit-bar-pct">30%</span>
+                            </div>
+                            <div class="bar-track"><div class="bar-fill warn" style="width:30%"></div></div>
+                        </div>
+                        <div class="fit-bar-row">
+                            <div class="fit-bar-top">
+                                <span class="fit-bar-label">DTC / physical product</span>
+                                <span class="fit-bar-pct">80%</span>
+                            </div>
+                            <div class="bar-track"><div class="bar-fill" style="width:80%"></div></div>
+                        </div>
+                        <div class="fit-bar-row">
+                            <div class="fit-bar-top">
+                                <span class="fit-bar-label">People management</span>
+                                <span class="fit-bar-pct">75%</span>
+                            </div>
+                            <div class="bar-track"><div class="bar-fill" style="width:75%"></div></div>
+                        </div>
+                        <div class="fit-bar-row">
+                            <div class="fit-bar-top">
+                                <span class="fit-bar-label">P&amp;L ownership</span>
+                                <span class="fit-bar-pct">80%</span>
+                            </div>
+                            <div class="bar-track"><div class="bar-fill" style="width:80%"></div></div>
+                        </div>
+                        <div class="fit-bar-row">
+                            <div class="fit-bar-top">
+                                <span class="fit-bar-label">Budget fit ($4–5K)</span>
+                                <span class="fit-bar-pct">55%</span>
+                            </div>
+                            <div class="bar-track"><div class="bar-fill warn" style="width:55%"></div></div>
+                        </div>
+                        <div class="fit-bar-row">
+                            <div class="fit-bar-top">
+                                <span class="fit-bar-label">Americas timezone</span>
+                                <span class="fit-bar-pct">80%</span>
+                            </div>
+                            <div class="bar-track"><div class="bar-fill" style="width:80%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="verdict-row">
+                    <div class="verdict good">
+                        Strong growth marketer with proven DTC results. Affiliate channel depth needs confirming in interview.
+                        Good candidate if budget is flexible by $500.
+                    </div>
+                    <div class="gap-note">
+                        Asking $5,500 vs. $5,000 budget ceiling. No direct affiliate marketing evidence in submitted profile.
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <span class="footer-label">Sagan AI scores</span>
+                <span class="score-badge score-a">A: 96</span>
+                <span class="score-badge score-b">B: 92</span>
+                <span class="score-badge score-c">C: 80 · Avg 89.3</span>
+                <a href="https://www.linkedin.com/in/anita-poletti-a1342857/" target="_blank" class="linkedin-btn">LinkedIn ↗</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ─────────────────────────────────────────────
+         #3 — Hervert Blancas Ramos
+    ───────────────────────────────────────────── -->
+    <div class="candidate-card-wrap fade-in">
+        <div class="card rank-3">
+            <div class="card-top">
+                <div class="card-identity">
+                    <div class="card-avatar">HB</div>
+                    <div class="card-name-group">
+                        <span class="card-name">Hervert Blancas Ramos</span>
+                        <span class="card-title-text">Marketing Director · 13+ years</span>
+                    </div>
+                </div>
+                <div class="card-top-right">
+                    <span class="rank-badge">#3 Consider</span>
+                    <div class="fit-score">
+                        <span class="fit-score-val warn">65</span>
+                        <span class="fit-score-label">Role fit / 100</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="card-meta-row">
+                    <span class="meta-pill pill-location">🇲🇽 Mexico</span>
+                    <span class="meta-pill pill-salary over-budget">$7,500 / month</span>
+                    <span class="meta-pill pill-exp">13+ yrs digital marketing</span>
+                </div>
+
+                <p class="card-summary">
+                    Senior marketing executive who built Mexico's first 100% digital bank (bineo at Banorte) from zero:
+                    <strong>50K new clients in 3 months</strong>, 500K+ app downloads in 6 months, P&amp;L accountability throughout.
+                    Also demonstrated affiliate marketing and lifecycle growth at 4Finance (50% CPA efficiency, 56% YoY loan growth).
+                    Strong operator with exceptional results — but financial sector context and salary $2.5K above budget are key flags for this role.
+                </p>
+
+                <div class="highlights-grid">
+                    <div class="highlight-item">
+                        <span class="highlight-arrow">→</span>
+                        <div class="highlight-text">
+                            <strong>50K new clients in 3 months</strong>
+                            bineo digital bank launch, Banorte
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-arrow">→</span>
+                        <div class="highlight-text">
+                            <strong>50% CPA efficiency</strong>
+                            4Finance — affiliate + P&amp;L ownership
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-arrow">→</span>
+                        <div class="highlight-text">
+                            <strong>111 lifecycle campaigns</strong>
+                            Email, WhatsApp, Push, SMS at scale
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-arrow">→</span>
+                        <div class="highlight-text">
+                            <strong>C-level stakeholder management</strong>
+                            Direct reporting to Banorte leadership
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fit-analysis">
+                    <p class="fit-analysis-header">Fit breakdown vs. MintAds requirements</p>
+                    <div class="fit-bars-grid">
+                        <div class="fit-bar-row">
+                            <div class="fit-bar-top">
+                                <span class="fit-bar-label">Affiliate / influencer exp.</span>
+                                <span class="fit-bar-pct">65%</span>
+                            </div>
+                            <div class="bar-track"><div class="bar-fill" style="width:65%"></div></div>
+                        </div>
+                        <div class="fit-bar-row">
+                            <div class="fit-bar-top">
+                                <span class="fit-bar-label">DTC / physical product</span>
+                                <span class="fit-bar-pct">25%</span>
+                            </div>
+                            <div class="bar-track"><div class="bar-fill warn" style="width:25%"></div></div>
+                        </div>
+                        <div class="fit-bar-row">
+                            <div class="fit-bar-top">
+                                <span class="fit-bar-label">People management</span>
+                                <span class="fit-bar-pct">80%</span>
+                            </div>
+                            <div class="bar-track"><div class="bar-fill" style="width:80%"></div></div>
+                        </div>
+                        <div class="fit-bar-row">
+                            <div class="fit-bar-top">
+                                <span class="fit-bar-label">P&amp;L ownership</span>
+                                <span class="fit-bar-pct">90%</span>
+                            </div>
+                            <div class="bar-track"><div class="bar-fill" style="width:90%"></div></div>
+                        </div>
+                        <div class="fit-bar-row">
+                            <div class="fit-bar-top">
+                                <span class="fit-bar-label">Budget fit ($4–5K)</span>
+                                <span class="fit-bar-pct">0%</span>
+                            </div>
+                            <div class="bar-track"><div class="bar-fill low" style="width:3%"></div></div>
+                        </div>
+                        <div class="fit-bar-row">
+                            <div class="fit-bar-top">
+                                <span class="fit-bar-label">Americas timezone</span>
+                                <span class="fit-bar-pct">100%</span>
+                            </div>
+                            <div class="bar-track"><div class="bar-fill" style="width:100%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="verdict-row">
+                    <div class="verdict partial">
+                        Exceptional operator with genuine affiliate and P&amp;L experience.
+                        The financial sector context means supplements/DTC is uncharted — and the salary gap is significant.
+                    </div>
+                    <div class="gap-note">
+                        $7,500 ask is 50% above the $5,000 ceiling. Career is financial services, not physical DTC / supplements.
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <span class="footer-label">Sagan AI scores</span>
+                <span class="score-badge score-a">A: 96</span>
+                <span class="score-badge score-b">B: 92</span>
+                <span class="score-badge score-c">C: 80 · Avg 89.3</span>
+                <a href="https://www.linkedin.com/in/soyhervert" target="_blank" class="linkedin-btn">LinkedIn ↗</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ─────────────────────────────────────────────
+         #4 — Francisco Miranda
+    ───────────────────────────────────────────── -->
+    <div class="candidate-card-wrap fade-in">
+        <div class="card rank-4">
+            <div class="card-top">
+                <div class="card-identity">
+                    <div class="card-avatar">FM</div>
+                    <div class="card-name-group">
+                        <span class="card-name">Francisco Miranda</span>
+                        <span class="card-title-text">Marketing Director, LATAM · 10+ years</span>
+                    </div>
+                </div>
+                <div class="card-top-right">
+                    <span class="rank-badge muted">#4 Notable Gap</span>
+                    <div class="fit-score">
+                        <span class="fit-score-val warn">53</span>
+                        <span class="fit-score-label">Role fit / 100</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="card-meta-row">
+                    <span class="meta-pill pill-location">🇨🇱 Chile</span>
+                    <span class="meta-pill pill-salary over-budget">$7,000 / month</span>
+                    <span class="meta-pill pill-exp">10+ yrs DIRECTV/AT&amp;T LATAM</span>
+                </div>
+
+                <p class="card-summary">
+                    Senior media executive with Director-level experience across DIRECTV, AT&amp;T, and VRIO (LATAM).
+                    Built DIRECTV GO Mexico from zero to <strong>500K+ subscribers</strong>; managed ~$10M annual media budgets;
+                    MBA from UCLA Anderson. Strong analytically (GA4, Looker Studio) and comfortable with large-scale
+                    paid media — but background is subscription TV/streaming on paid social and search,
+                    not affiliate-driven DTC. Salary exceeds budget by 40%.
+                </p>
+
+                <div class="highlights-grid">
+                    <div class="highlight-item">
+                        <span class="highlight-arrow">→</span>
+                        <div class="highlight-text">
+                            <strong>500K+ subscribers acquired</strong>
+                            DIRECTV GO Mexico — built from scratch
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-arrow">→</span>
+                        <div class="highlight-text">
+                            <strong>40% YoY subscription growth</strong>
+                            FIFA World Cup &amp; Olympics campaigns
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-arrow">→</span>
+                        <div class="highlight-text">
+                            <strong>20% CAC reduction</strong>
+                            Performance optimization, Meta &amp; Google
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-arrow">→</span>
+                        <div class="highlight-text">
+                            <strong>MBA, UCLA Anderson</strong>
+                            Strong strategic and analytical foundation
+                        </div>
+                    </div>
+                </div>
+
+                <div class="verdict-row">
+                    <div class="verdict partial">
+                        Strong executive credentials and analytics depth. Background is paid media (Meta/Google) for streaming,
+                        not affiliate-driven physical DTC. Would require significant channel pivot.
+                    </div>
+                    <div class="gap-note">
+                        $7,000 ask is 40% above budget. No affiliate marketing experience demonstrated.
+                        DTC physical product context is absent.
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <span class="footer-label">Sagan AI scores</span>
+                <span class="score-badge score-a">A: 100</span>
+                <span class="score-badge score-b">B: 92</span>
+                <span class="score-badge score-c">C: 80 · Avg 90.7</span>
+                <a href="https://www.linkedin.com/in/francisco-miranda-barroso" target="_blank" class="linkedin-btn">LinkedIn ↗</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ─────────────────────────────────────────────
+         #5 — Chlint Gargaritano
+    ───────────────────────────────────────────── -->
+    <div class="candidate-card-wrap fade-in">
+        <div class="card rank-5">
+            <div class="card-top">
+                <div class="card-identity">
+                    <div class="card-avatar">CG</div>
+                    <div class="card-name-group">
+                        <span class="card-name">Chlint Gargaritano</span>
+                        <span class="card-title-text">Performance &amp; E-Commerce Marketer</span>
+                    </div>
+                </div>
+                <div class="card-top-right">
+                    <span class="rank-badge muted">#5 Mid-Level</span>
+                    <div class="fit-score">
+                        <span class="fit-score-val warn">54</span>
+                        <span class="fit-score-label">Role fit / 100</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="card-meta-row">
+                    <span class="meta-pill pill-location">🇵🇭 Philippines</span>
+                    <span class="meta-pill pill-salary">$3,000 / month</span>
+                    <span class="meta-pill pill-exp">DTC / e-commerce marketer</span>
+                </div>
+
+                <p class="card-summary">
+                    Performance and e-commerce marketer with hands-on DTC experience across Nanobags, TikTok Shop,
+                    Seafair US, and Wavemaker PH. Grew YoY GMV <strong>159%</strong> with a <strong>3.68 ROAS</strong> for a DTC brand.
+                    TikTok Shop experience brings relevant affiliate/creator channel exposure.
+                    Philippines timezone provides strong EST overlap (UTC+8 = EST+13 — ideal for 24/7 coverage).
+                    Profile reads mid-level; Director-scope people management (6–10 direct reports) is likely a stretch.
+                </p>
+
+                <div class="highlights-grid">
+                    <div class="highlight-item">
+                        <span class="highlight-arrow">→</span>
+                        <div class="highlight-text">
+                            <strong>159% YoY GMV growth</strong>
+                            3.68 ROAS for DTC consumer brand
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-arrow">→</span>
+                        <div class="highlight-text">
+                            <strong>TikTok Shop affiliate channel</strong>
+                            Creator partnerships and GMV scaling
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-arrow">→</span>
+                        <div class="highlight-text">
+                            <strong>Multi-platform attribution</strong>
+                            Accoil Analytics, Shopee PH, Wavemaker
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-arrow">→</span>
+                        <div class="highlight-text">
+                            <strong>Philippines timezone</strong>
+                            UTC+8 — valuable for 24/7 ops coverage
+                        </div>
+                    </div>
+                </div>
+
+                <div class="verdict-row">
+                    <div class="verdict partial">
+                        Good DTC instincts and TikTok Shop affiliate exposure.
+                        Director-level scope (6–10 reports, 24/7 accountability) is likely beyond current seniority.
+                    </div>
+                    <div class="gap-note">
+                        Limited team leadership evidence. Role requires managing a pod of 6–10, which looks like a seniority gap.
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <span class="footer-label">Sagan AI scores</span>
+                <span class="score-badge score-a">A: 94</span>
+                <span class="score-badge score-b">B: 80</span>
+                <span class="score-badge score-c">C: 80 · Avg 84.7</span>
+                <a href="https://ph.linkedin.com/in/chlint-gargaritano-238994158" target="_blank" class="linkedin-btn">LinkedIn ↗</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ─────────────────────────────────────────────
+         #6 — Ritchie Fernandez Baquirin
+    ───────────────────────────────────────────── -->
+    <div class="candidate-card-wrap fade-in">
+        <div class="card rank-6">
+            <div class="card-top">
+                <div class="card-identity">
+                    <div class="card-avatar" style="background:#374151">RB</div>
+                    <div class="card-name-group">
+                        <span class="card-name">Ritchie Fernandez Baquirin</span>
+                        <span class="card-title-text">Creative Director &amp; Brand Strategist · 20+ years</span>
+                    </div>
+                </div>
+                <div class="card-top-right">
+                    <span class="rank-badge muted">#6 Profile Mismatch</span>
+                    <div class="fit-score">
+                        <span class="fit-score-val low">33</span>
+                        <span class="fit-score-label">Role fit / 100</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="card-meta-row">
+                    <span class="meta-pill pill-location">🇵🇭 Philippines</span>
+                    <span class="meta-pill pill-salary">$3,000 / month</span>
+                    <span class="meta-pill pill-exp">20+ yrs brand / creative direction</span>
+                </div>
+
+                <p class="card-summary">
+                    World-class Creative Director and Brand Strategist with 20+ years across EON Group (Netflix, McDonald's, Spotify),
+                    EAK Distribution (DTC Amazon), and a self-founded agency. Exceptional at brand systems, visual identity,
+                    eCommerce creative optimization, and Adobe Creative Suite. Applied originally for a creative strategy role.
+                    Profile is best suited for Creative Director or Head of Creative functions — not performance marketing leadership.
+                </p>
+
+                <div class="highlights-grid">
+                    <div class="highlight-item">
+                        <span class="highlight-arrow">→</span>
+                        <div class="highlight-text">
+                            <strong>EON Group Creative Director</strong>
+                            Netflix, McDonald's, BMW, Spotify campaigns
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-arrow">→</span>
+                        <div class="highlight-text">
+                            <strong>200+ SKU creative systems</strong>
+                            EAK Distribution — US Amazon DTC
+                        </div>
+                    </div>
+                </div>
+
+                <div class="verdict-row">
+                    <div class="verdict low-fit">
+                        Profile mismatch. Ritchie is a world-class creative director, not a performance marketing leader.
+                        Not recommended for this specific role.
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <span class="footer-label">Sagan AI scores (original role)</span>
+                <span class="score-badge score-a">A: 100</span>
+                <span class="score-badge score-b">B: 92</span>
+                <span class="score-badge score-c">C: 80 · Avg 90.7</span>
+                <a href="https://www.linkedin.com/in/ritchie-baquirin/" target="_blank" class="linkedin-btn">LinkedIn ↗</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ─────────────────────────────────────────────
+         #7 — James Matthew Magtaan
+    ───────────────────────────────────────────── -->
+    <div class="candidate-card-wrap fade-in">
+        <div class="card rank-7">
+            <div class="card-top">
+                <div class="card-identity">
+                    <div class="card-avatar" style="background:#374151">JM</div>
+                    <div class="card-name-group">
+                        <span class="card-name">James Matthew Magtaan</span>
+                        <span class="card-title-text">Creative Lead &amp; Project Manager · 9 years</span>
+                    </div>
+                </div>
+                <div class="card-top-right">
+                    <span class="rank-badge muted">#7 Profile Mismatch</span>
+                    <div class="fit-score">
+                        <span class="fit-score-val low">32</span>
+                        <span class="fit-score-label">Role fit / 100</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="card-meta-row">
+                    <span class="meta-pill pill-location">🇵🇭 Philippines</span>
+                    <span class="meta-pill pill-salary">$2,000–2,200 / month</span>
+                    <span class="meta-pill pill-exp">9 yrs creative &amp; operations</span>
+                </div>
+
+                <p class="card-summary">
+                    Creative Lead and Project Manager with 9 years spanning entertainment (Universal Records), sports (RiseUp),
+                    e-commerce (Etaily), and corporate (Willis Towers Watson). Managed creative teams of 20+, strong on PM tools
+                    (Airtable, ClickUp, Notion), and solid in Adobe CS and Figma.
+                    Career is rooted in creative operations and brand management — not performance marketing or affiliate growth leadership.
+                </p>
+
+                <div class="highlights-grid">
+                    <div class="highlight-item">
+                        <span class="highlight-arrow">→</span>
+                        <div class="highlight-text">
+                            <strong>Creative teams of 20+</strong>
+                            Willis Towers Watson — cross-functional
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-arrow">→</span>
+                        <div class="highlight-text">
+                            <strong>Universal Records + Etaily</strong>
+                            Brand management and e-commerce creative
+                        </div>
+                    </div>
+                </div>
+
+                <div class="verdict-row">
+                    <div class="verdict low-fit">
+                        Strong creative and operations background. Does not align with Director of Performance Marketing requirements
+                        — no performance marketing, affiliate, or DTC growth evidence.
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <span class="footer-label">Sagan AI scores (original role)</span>
+                <span class="score-badge score-a">A: 96</span>
+                <span class="score-badge score-b">B: 92</span>
+                <span class="score-badge score-c">C: 80 · Avg 89.3</span>
+                <a href="https://www.linkedin.com/in/jamesmagtaan/" target="_blank" class="linkedin-btn">LinkedIn ↗</a>
+            </div>
+        </div>
+    </div>
+
+</section><!-- /candidates-section -->
+
+<!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+<footer>
+    <div class="footer-inner">
+        <span class="footer-text">Confidential · For MintAds internal review only · HR35127</span>
+        <span class="footer-brand">Presented by <span>Sagan White Glove</span> · getsagan.com</span>
+        <span class="footer-text">March 2026</span>
+    </div>
+</footer>
+
+<script>
+    // Scroll-reveal for .fade-in elements
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
