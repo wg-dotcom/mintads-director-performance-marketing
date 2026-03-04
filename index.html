@@ -383,6 +383,290 @@
         /* ═══════════════════════════════════
            RESPONSIVE
         ═══════════════════════════════════ */
+        /* ═══════════════════════════════════
+           DOC LINKS (per card)
+        ═══════════════════════════════════ */
+        .doc-links {
+            border-top: 1px solid var(--gray-light);
+            margin-top: 20px;
+            padding-top: 18px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .doc-links-label {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--gray);
+            margin-right: 6px;
+            white-space: nowrap;
+        }
+
+        .doc-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 7px 16px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: 1px solid var(--gray-light);
+            color: var(--gray-dark);
+            background: var(--white);
+        }
+
+        .doc-link:hover {
+            border-color: var(--mint-border);
+            background: var(--mint-glow);
+            color: var(--mint-deep);
+        }
+
+        .doc-link svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+        .doc-link.primary {
+            background: var(--mint);
+            color: var(--white);
+            border-color: var(--mint);
+        }
+
+        .doc-link.primary:hover {
+            background: var(--mint-deep);
+            border-color: var(--mint-deep);
+        }
+
+        .doc-link.video {
+            background: rgba(0,200,150,0.08);
+            border-color: rgba(0,200,150,0.25);
+            color: var(--mint-deep);
+        }
+
+        .doc-link.video:hover {
+            background: rgba(0,200,150,0.15);
+        }
+
+        .doc-link.pending {
+            opacity: 0.45;
+            pointer-events: none;
+            border-style: dashed;
+        }
+
+        /* ═══════════════════════════════════
+           COMPARISON TABLE
+        ═══════════════════════════════════ */
+        .comparison-section {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 70px 40px 80px;
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+            margin-top: 30px;
+            border-radius: 12px;
+            border: 1px solid var(--gray-light);
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+            min-width: 800px;
+        }
+
+        .comparison-table thead th {
+            background: var(--darker);
+            color: var(--white);
+            padding: 14px 14px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 12px;
+            letter-spacing: 0.3px;
+            white-space: nowrap;
+        }
+
+        .comparison-table thead th:first-child { border-radius: 11px 0 0 0; }
+        .comparison-table thead th:last-child { border-radius: 0 11px 0 0; }
+
+        .comparison-table tbody td {
+            padding: 12px 14px;
+            border-bottom: 1px solid var(--gray-light);
+            color: var(--gray-dark);
+            vertical-align: middle;
+            line-height: 1.4;
+            font-size: 13px;
+        }
+
+        .comparison-table tbody tr:last-child td { border-bottom: none; }
+        .comparison-table tbody tr:nth-child(even) { background: var(--light); }
+        .comparison-table tbody td:first-child { font-weight: 600; color: var(--dark); white-space: nowrap; }
+        .check { color: var(--mint-deep); font-weight: 700; }
+        .partial { color: var(--gray); font-weight: 500; }
+
+        /* ═══════════════════════════════════
+           TEAM / RECRUITER
+        ═══════════════════════════════════ */
+        .team-section {
+            background: var(--light);
+            padding: 70px 40px 80px;
+        }
+
+        .team-inner {
+            max-width: 820px;
+            margin: 0 auto;
+        }
+
+        .team-heading {
+            font-size: clamp(22px, 3vw, 28px);
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+
+        .team-subtitle {
+            font-size: 15px;
+            color: var(--gray);
+            margin-bottom: 36px;
+            line-height: 1.7;
+        }
+
+        .team-card {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 8px 28px rgba(0,0,0,0.06);
+            max-width: 380px;
+            margin-bottom: 40px;
+        }
+
+        .team-card-top {
+            background: var(--darker);
+            padding: 32px 24px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .team-photo {
+            width: 92px;
+            height: 92px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--mint);
+            margin-bottom: -46px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .team-card-body {
+            padding: 60px 28px 28px;
+            text-align: center;
+        }
+
+        .team-name {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 4px;
+        }
+
+        .team-role {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--mint-deep);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 8px;
+        }
+
+        .team-location {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 13px;
+            color: var(--gray);
+            margin-bottom: 16px;
+        }
+
+        .team-location svg { width: 14px; height: 14px; }
+
+        .team-bio {
+            font-size: 13.5px;
+            color: var(--gray-dark);
+            line-height: 1.7;
+            margin-bottom: 14px;
+        }
+
+        .team-email {
+            font-size: 13px;
+            color: var(--mint-deep);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .team-email:hover { text-decoration: underline; }
+
+        .sagan-info {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 36px;
+            display: flex;
+            gap: 28px;
+            align-items: flex-start;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 8px 28px rgba(0,0,0,0.06);
+        }
+
+        .sagan-logo-mark {
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            background: var(--mint);
+            color: var(--white);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            font-weight: 800;
+        }
+
+        .sagan-text h3 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .sagan-text p {
+            font-size: 13.5px;
+            color: var(--gray-dark);
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .sagan-stats {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .sagan-stat {
+            font-size: 12px;
+            color: var(--gray);
+        }
+
+        .sagan-stat strong {
+            color: var(--mint-deep);
+            font-weight: 700;
+        }
+
+        /* ═══════════════════════════════════
+           RESPONSIVE
+        ═══════════════════════════════════ */
         @media (max-width: 768px) {
             .hero-inner { padding: 40px 24px 50px; }
             .hero-meta { gap: 18px; }
@@ -390,6 +674,9 @@
             .candidates-section { padding: 50px 24px 70px; }
             .card { padding: 28px 24px; }
             .card-top { flex-direction: column; }
+            .comparison-section { padding: 50px 24px; }
+            .team-section { padding: 50px 24px; }
+            .sagan-info { flex-direction: column; }
         }
     </style>
 </head>
@@ -476,6 +763,25 @@
                 <span class="highlight-tag">DTC Focus</span>
                 <span class="highlight-tag">Remote Team Builder</span>
             </div>
+            <div class="doc-links">
+                <span class="doc-links-label">Materials</span>
+                <a href="https://prod-fillout-oregon-s3.s3.us-west-2.amazonaws.com/orgid-351357/flowpublicid-fPkqcpRnEMus/a862e2c7-358f-4740-be2c-1363b7b6e3e0-Yx1yXKJm1b8vumnL5wb8oO1WJ6STbuQGulnAJgQzpj5PxD2Ps9ZX7rihMLBhbJsrFADyrvisSQPw6FXmDHsUrhA3CEJhqKaNiQ4/DaAndre-Fraser-CV---Director-of-Performance-Marketing.pdf" target="_blank" class="doc-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    Resume
+                </a>
+                <a href="https://sagan-applicant-videos.84ecbbeef5d343a183e4ecefc49eff08.r2.dev/uploads/67fda911-c3c1-4b4f-a1f7-860ce8aa4cf6" target="_blank" class="doc-link video">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                    Video Intro
+                </a>
+                <a href="#" class="doc-link pending">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                    Screening
+                </a>
+                <a href="#" class="doc-link pending">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                    Transcript
+                </a>
+            </div>
         </div>
 
         <!-- ─── Valeria ─── -->
@@ -501,6 +807,25 @@
                 <span class="highlight-tag">Nike / Under Armour</span>
                 <span class="highlight-tag">Data-Driven Testing</span>
                 <span class="highlight-tag">eCommerce Brands</span>
+            </div>
+            <div class="doc-links">
+                <span class="doc-links-label">Materials</span>
+                <a href="https://prod-fillout-oregon-s3.s3.us-west-2.amazonaws.com/orgid-351357/flowpublicid-fPkqcpRnEMus/5dc7416e-817e-4f4f-98b9-8a1dfe43b009-12Nx0tEJJ2H9ERA7iOqOt2vIDiP6dKYclERzFJ3bDZTDMq2362w7Z1U9OmCVoHQhmBxIDud56vSur6dvuXoq6SzcApJjTqJ1wFW/CV-Valeria-Olier-(2).pdf" target="_blank" class="doc-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    Resume
+                </a>
+                <a href="https://sagan-applicant-videos.84ecbbeef5d343a183e4ecefc49eff08.r2.dev/uploads/c06da68f-37ba-4b07-8f2d-b8c73bba2b80" target="_blank" class="doc-link video">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                    Video Intro
+                </a>
+                <a href="#" class="doc-link pending">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                    Screening
+                </a>
+                <a href="#" class="doc-link pending">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                    Transcript
+                </a>
             </div>
         </div>
 
@@ -528,6 +853,25 @@
                 <span class="highlight-tag">P&L Ownership</span>
                 <span class="highlight-tag">12-Person Distributed Teams</span>
             </div>
+            <div class="doc-links">
+                <span class="doc-links-label">Materials</span>
+                <a href="https://prod-fillout-oregon-s3.s3.us-west-2.amazonaws.com/orgid-351357/flowpublicid-fPkqcpRnEMus/c6a819e1-27e0-46df-9351-ac050235c629-VwyZzGCxz86DafhrjrCb3ABlIlkkYYIiuQ39da98VJCqaQuS1yly6y0CFgeJK2dfZTWy0Bst8cJr1ln3Li1uHKK4u7WlJjATtPl/CV-EN---CEO-CMO---Manuel-Angulo-Ruiz---2026.pdf" target="_blank" class="doc-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    Resume
+                </a>
+                <a href="https://sagan-applicant-videos.84ecbbeef5d343a183e4ecefc49eff08.r2.dev/uploads/e4f2ee78-d8e2-424e-b691-2e4ddd9e7433" target="_blank" class="doc-link video">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                    Video Intro
+                </a>
+                <a href="#" class="doc-link pending">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                    Screening
+                </a>
+                <a href="#" class="doc-link pending">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                    Transcript
+                </a>
+            </div>
         </div>
 
         <!-- ─── Nadine ─── -->
@@ -554,6 +898,25 @@
                 <span class="highlight-tag">Teams of 6-13</span>
                 <span class="highlight-tag">AI & Data Science</span>
             </div>
+            <div class="doc-links">
+                <span class="doc-links-label">Materials</span>
+                <a href="https://prod-fillout-oregon-s3.s3.us-west-2.amazonaws.com/orgid-351357/flowpublicid-fPkqcpRnEMus/31b01d79-ff5e-44cf-b50d-344b2bcf5c21-T3FxHVCLL1aQjMchFhltFrfoKtaZhGrPyEFeCQNeNVwsS7rHsldUiSYeBk0G0SV4PLDTmvCWxkC6UkeHFEwdonLgfcMNOmRTZJv/EN.pdf" target="_blank" class="doc-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    Resume
+                </a>
+                <a href="#" class="doc-link video pending">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                    Video Intro
+                </a>
+                <a href="#" class="doc-link pending">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                    Screening
+                </a>
+                <a href="#" class="doc-link pending">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                    Transcript
+                </a>
+            </div>
         </div>
 
         <!-- ─── William ─── -->
@@ -579,6 +942,25 @@
                 <span class="highlight-tag">51% Sales Growth</span>
                 <span class="highlight-tag">45% CAC Reduction</span>
                 <span class="highlight-tag">Full-Stack Operator</span>
+            </div>
+            <div class="doc-links">
+                <span class="doc-links-label">Materials</span>
+                <a href="https://prod-fillout-oregon-s3.s3.us-west-2.amazonaws.com/orgid-351357/flowpublicid-fPkqcpRnEMus/c4eddc04-dd4d-47f5-9f70-c789c145862d-zRpF79qFvgBIUnVUTEUn7AkQ9j0SfsGxqmlkeJbFeEshVIaSLckAXwirHPvm6tdG9uvWp88N6jLjrrE6YC4L1Rv0B8Dzz8PQkxI/Resume_William_K_Updated-(1).pdf" target="_blank" class="doc-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    Resume
+                </a>
+                <a href="https://sagan-applicant-videos.84ecbbeef5d343a183e4ecefc49eff08.r2.dev/uploads/08cb76b3-672f-4d84-bbb5-2acbdb993b6a" target="_blank" class="doc-link video">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                    Video Intro
+                </a>
+                <a href="#" class="doc-link pending">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                    Screening
+                </a>
+                <a href="#" class="doc-link pending">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                    Transcript
+                </a>
             </div>
         </div>
 
@@ -614,6 +996,123 @@
             </p>
         </div>
 
+    </div>
+</section>
+
+<!-- ════════════ COMPARISON TABLE ════════════ -->
+<section class="comparison-section">
+    <div class="editorial-label">At a Glance</div>
+    <h2 class="editorial-heading">Side-by-Side Comparison</h2>
+    <p class="editorial-body">All five screened candidates, stacked against what MintAds actually needs in this role.</p>
+    <div class="table-wrap">
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Criteria</th>
+                    <th>D'Andre</th>
+                    <th>Valeria</th>
+                    <th>Manuel</th>
+                    <th>Nadine</th>
+                    <th>William</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Affiliate / Influencer Mktg</td>
+                    <td class="partial">Indirect</td>
+                    <td class="partial">Indirect</td>
+                    <td class="partial">Indirect</td>
+                    <td class="partial">Adjacent</td>
+                    <td class="partial">Indirect</td>
+                </tr>
+                <tr>
+                    <td>DTC / Physical Products</td>
+                    <td class="check">Yes</td>
+                    <td class="check">Yes (P&G)</td>
+                    <td class="partial">Limited</td>
+                    <td class="partial">Education</td>
+                    <td class="check">Yes (Kaspersky)</td>
+                </tr>
+                <tr>
+                    <td>P&L Ownership</td>
+                    <td class="check">Yes</td>
+                    <td class="partial">Partial</td>
+                    <td class="check">Yes (CEO/CMO)</td>
+                    <td class="check">Yes (R$7.69MM)</td>
+                    <td class="check">Yes</td>
+                </tr>
+                <tr>
+                    <td>Team Building (6-10+)</td>
+                    <td class="check">Remote teams</td>
+                    <td class="partial">Smaller scope</td>
+                    <td class="check">Up to 12</td>
+                    <td class="check">6-13 people</td>
+                    <td class="partial">Smaller scope</td>
+                </tr>
+                <tr>
+                    <td>AI / Data Fluency</td>
+                    <td class="check">Yes</td>
+                    <td class="check">Data-driven</td>
+                    <td class="check">AI tools</td>
+                    <td class="check">Postgrad in AI</td>
+                    <td class="check">Analytics stack</td>
+                </tr>
+                <tr>
+                    <td>Americas Timezone</td>
+                    <td class="check">Jamaica (EST)</td>
+                    <td class="check">Colombia (COT)</td>
+                    <td class="check">Costa Rica (CST)</td>
+                    <td class="check">Brazil (BRT)</td>
+                    <td class="check">Brazil (BRT)</td>
+                </tr>
+                <tr>
+                    <td>Monthly Rate</td>
+                    <td>$3,000-$3,500</td>
+                    <td>$2,600</td>
+                    <td>$4,500</td>
+                    <td>$4,700</td>
+                    <td>$4,000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- ════════════ TEAM ════════════ -->
+<section class="team-section">
+    <div class="team-inner">
+        <div class="editorial-label">Your Dedicated Team</div>
+        <h2 class="team-heading">Meet the Recruiting Team</h2>
+        <p class="team-subtitle">This search is led by a dedicated team that understands your business and what a real fit looks like. Not just someone who can do the job. Someone who can own it.</p>
+
+        <div class="team-card">
+            <div class="team-card-top">
+                <img class="team-photo" src="https://saganrecruitment.com/wp-content/uploads/2025/10/Jesus-Pacheco.jpeg" alt="Jes&uacute;s Pacheco">
+            </div>
+            <div class="team-card-body">
+                <div class="team-name">Jes&uacute;s Pacheco</div>
+                <div class="team-role">Head of White Glove Hirings</div>
+                <div class="team-location">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    Mendoza, Argentina
+                </div>
+                <p class="team-bio">Leads White Glove Hirings at Sagan. MIT Supply Chain background, 16 years in sales and operations across LATAM. He runs the search strategy, screens every candidate personally, and advises on fit. He's the one you talk to when it matters.</p>
+                <a href="mailto:jesus.p@getsagan.com" class="team-email">jesus.p@getsagan.com</a>
+            </div>
+        </div>
+
+        <div class="sagan-info">
+            <div class="sagan-logo-mark">S</div>
+            <div class="sagan-text">
+                <h3>Powered by Sagan</h3>
+                <p>Sagan connects professionals from <strong>Latin America, Africa, Asia, the Middle East, Central and Eastern Europe, and more</strong> with US companies. We run a curated, high-touch process from sourcing to placement, and stay accountable to the outcome on both sides.</p>
+                <div class="sagan-stats">
+                    <div class="sagan-stat"><strong>20,000+</strong> Applications / Month</div>
+                    <div class="sagan-stat"><strong>2,000+</strong> Placements</div>
+                    <div class="sagan-stat"><strong>30+</strong> Countries</div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
