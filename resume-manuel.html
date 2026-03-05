@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manuel Angulo Ruiz - Resume | MintAds</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, sans-serif; background: #f0f0f0; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        .page { max-width: 820px; margin: 40px auto; background: #fff; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+
+        /* Header */
+        .header { background: #060C14; padding: 44px 52px 38px; position: relative; }
+        .logo { font-size: 10px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: #00C896; margin-bottom: 22px; }
+        .name { font-size: 30px; font-weight: 700; color: #fff; margin-bottom: 6px; letter-spacing: -0.3px; }
+        .headline { font-size: 14.5px; font-weight: 400; color: #94a3b8; margin-bottom: 20px; line-height: 1.5; }
+        .contact { display: flex; flex-wrap: wrap; gap: 18px; font-size: 12.5px; color: #94a3b8; }
+        .contact a { color: #94a3b8; text-decoration: none; transition: color 0.2s; }
+        .contact a:hover { color: #00C896; }
+        .mint-bar { height: 3px; background: linear-gradient(90deg, #00C896, #00a87d); position: absolute; bottom: 0; left: 0; right: 0; }
+
+        /* Body */
+        .body { padding: 38px 52px 48px; }
+
+        /* Sections */
+        .section { margin-bottom: 30px; }
+        .section:last-child { margin-bottom: 0; }
+        .section-label { font-size: 10.5px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #00C896; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1.5px solid #e5e7eb; }
+
+        /* Summary */
+        .summary { font-size: 13.5px; color: #374151; line-height: 1.75; }
+
+        /* Jobs */
+        .job { margin-bottom: 24px; }
+        .job:last-child { margin-bottom: 0; }
+        .job-top { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 2px; }
+        .job-company { font-size: 14px; font-weight: 600; color: #111827; }
+        .job-role { font-weight: 400; color: #6b7280; }
+        .job-date { font-size: 12px; color: #6b7280; white-space: nowrap; }
+        .job-location { font-size: 12px; color: #9ca3af; margin-bottom: 8px; }
+        .job ul { padding-left: 18px; }
+        .job li { font-size: 13px; color: #374151; line-height: 1.65; margin-bottom: 4px; }
+        .job-desc { font-size: 13px; color: #374151; line-height: 1.65; margin-bottom: 8px; }
+
+        /* Education */
+        .edu { margin-bottom: 14px; }
+        .edu:last-child { margin-bottom: 0; }
+        .edu-top { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; }
+        .edu-degree { font-size: 13.5px; font-weight: 600; color: #111827; }
+        .edu-date { font-size: 12px; color: #6b7280; }
+        .edu-school { font-size: 12.5px; color: #6b7280; }
+
+        /* Skills */
+        .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .skill-item h4 { font-size: 12.5px; font-weight: 600; color: #111827; margin-bottom: 3px; }
+        .skill-item p { font-size: 12px; color: #6b7280; line-height: 1.55; }
+        .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+        .skill-tag { font-size: 11.5px; color: #374151; background: #f3f4f6; padding: 4px 10px; border-radius: 4px; }
+
+        /* Languages */
+        .lang-list { display: flex; gap: 24px; flex-wrap: wrap; }
+        .lang-item { font-size: 13px; color: #374151; }
+        .lang-level { color: #6b7280; }
+
+        /* Courses */
+        .course-list { list-style: none; padding: 0; }
+        .course-list li { font-size: 12.5px; color: #374151; padding: 3px 0; }
+
+        /* Footer */
+        .footer { background: #060C14; padding: 14px 52px; display: flex; justify-content: space-between; align-items: center; }
+        .footer .logo-sm { font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #00C896; }
+        .footer .conf { font-size: 9px; color: #475569; letter-spacing: 0.5px; }
+
+        /* Print */
+        @media print {
+            body { background: #fff; }
+            .page { margin: 0; box-shadow: none; }
+        }
+        @media (max-width: 640px) {
+            .header, .body, .footer { padding-left: 24px; padding-right: 24px; }
+            .name { font-size: 24px; }
+            .skills-grid { grid-template-columns: 1fr; }
+            .contact { flex-direction: column; gap: 6px; }
+            .job-top, .edu-top { flex-direction: column; gap: 2px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="header">
+            <div class="logo">MintAds</div>
+            <div class="name">Manuel Angulo Ruiz</div>
+            <div class="headline">CEO | Chief Marketing &amp; Growth Officer<br>Brand &amp; Revenue Leadership | E-Commerce Strategy | Go-To-Market Execution</div>
+            <div class="contact">
+                <span>San Jose, Costa Rica</span>
+                <span>manuelangulo@gmail.com</span>
+                <span>+506 6027-4678</span>
+                <a href="https://linkedin.com/in/manuelanguloruiz">linkedin.com/in/manuelanguloruiz</a>
+            </div>
+            <div class="mint-bar"></div>
+        </div>
+
+        <div class="body">
+            <!-- Professional Summary -->
+            <div class="section">
+                <div class="section-label">Professional Summary</div>
+                <p class="summary">Board-level Marketing &amp; Growth Executive with 20+ years of global experience scaling brands, driving revenue, and leading omnichannel growth across five continents. Proven record building scalable marketing and e-commerce platforms, driving demand, and executing international go-to-market initiatives with full P&amp;L accountability across B2B, B2C, and D2C organizations in hospitality, real estate, fintech, education, technology, and retail.</p>
+            </div>
+
+            <!-- Experience -->
+            <div class="section">
+                <div class="section-label">Professional Experience</div>
+
+                <div class="job">
+                    <div class="job-top">
+                        <div class="job-company">Diwo Digital <span class="job-role">| Founder &amp; CEO</span></div>
+                        <div class="job-date">2021 - Present</div>
+                    </div>
+                    <p class="job-desc">Founded and scaled a global marketing advisory firm with full P&amp;L ownership, directing firm-wide operations and leading revenue and brand strategy, acquisition funnels, GTM execution, and performance marketing for startups and global brands in the Americas and Europe.</p>
+                    <ul>
+                        <li>Doubled firm revenue within 18 months, expanding operations to three continents.</li>
+                        <li>Designed and implemented full-funnel revenue engines (demand generation, conversion, retention), increasing client ROI by 250% with 15-25x ROAS across paid media.</li>
+                        <li>Secured and led enterprise mandates in real estate, hospitality, technology, and retail.</li>
+                        <li>Designed go-to-market roadmaps and commercial systems integrating CRM, campaigns, data, and revenue attribution, driving conversion rates up to 7x.</li>
+                        <li>Built and led a 12-person cross-functional team spanning strategy, media, and analytics.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-top">
+                        <div class="job-company">YNV Group <span class="job-role">| Global Digital Marketing Manager</span></div>
+                        <div class="job-date">2020 - 2021</div>
+                    </div>
+                    <p class="job-desc">Led global digital growth, brand repositioning, e-commerce strategy, and GTM execution for YNV Group's real estate &amp; hospitality, fintech, and edtech portfolio (Everty, Monifai, TeKnowledge), driving revenue and market expansion in the Americas, EMEA, and Asia.</p>
+                    <ul>
+                        <li>Increased Everty revenue 150%, delivering 16x traffic growth and strong paid media ROI.</li>
+                        <li>Built and launched Monifai's acquisition infrastructure, achieving profitability in Year 1.</li>
+                        <li>Led TeKnowledge's global rebrand and co-launched a Microsoft-partnered Digital Center of Excellence in Qatar.</li>
+                        <li>Drove near-full enrollment in edtech programs across LATAM, Africa, and Asia.</li>
+                        <li>Managed 7 contributors across four continents, aligning GTM and revenue execution.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-top">
+                        <div class="job-company">Independent <span class="job-role">| Business Strategy Consultant</span></div>
+                        <div class="job-date">2018 - 2020</div>
+                    </div>
+                    <p class="job-desc">Advised 30+ organizations across travel, real estate, professional services, retail, and nonprofit sectors on go-to-market plans, brand strategy, digital transformation, sales optimization, e-commerce capabilities, and market expansion in Europe and LATAM.</p>
+                    <ul>
+                        <li>Delivered triple-digit revenue growth via sales funnel and acquisition strategy redesign.</li>
+                        <li>Designed multilingual market entry and localization strategies.</li>
+                        <li>Increased nonprofit funding by 140% through digital-led audience development.</li>
+                        <li>Built CRM, automation, and analytics infrastructures to scale growth.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-top">
+                        <div class="job-company">Las Catalinas <span class="job-role">| Director of E-Commerce</span></div>
+                        <div class="job-date">2017 - 2018</div>
+                    </div>
+                    <p class="job-desc">Owned global digital P&amp;L for a luxury destination ecosystem spanning rentals, resorts, real estate, dining, and retail operations, with a focus on North America and Europe.</p>
+                    <ul>
+                        <li>Increased online revenue 300% through pricing and acquisition optimization, booking architecture redesign, UX flows optimization, and channel mix strategy.</li>
+                        <li>Shifted revenue toward higher-margin direct bookings through paid and owned-media.</li>
+                        <li>Led development of three new rental brands and digital platform modernization.</li>
+                        <li>Directed agencies and technology partners to strengthen commercial performance.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-top">
+                        <div class="job-company">Independent <span class="job-role">| Commercial Growth &amp; Strategy Consultant</span></div>
+                        <div class="job-date">2014 - 2017</div>
+                    </div>
+                    <p class="job-desc">Advised organizations on revenue growth, go-to-market planning, pricing strategy, brand repositioning, e-commerce capabilities, and digital acceleration across LATAM and Europe.</p>
+                    <ul>
+                        <li>Drove 140%+ revenue growth through GTM strategy and full-funnel optimization.</li>
+                        <li>Developed pricing, positioning, and lifecycle marketing frameworks to expand margins.</li>
+                        <li>Led brand repositioning and cross-border expansion initiatives.</li>
+                        <li>Implemented CRM, automation, and analytics systems to scale operations.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-top">
+                        <div class="job-company">Marriott International <span class="job-role">| Regional E-Commerce Manager</span></div>
+                        <div class="job-date">2013 - 2013</div>
+                    </div>
+                    <p class="job-desc">Led regional e-commerce strategy and digital P&amp;L for 13 hotels across five brands in Central America, driving direct channel growth and optimizing OTA/GDS performance.</p>
+                    <ul>
+                        <li>Grew direct online revenue 15-20% YoY via SEO, paid media, CRO, and channel strategy.</li>
+                        <li>Achieved #1 regional Expedia ranking among 200+ hotels (1:18 ROI).</li>
+                        <li>Oversaw global revenue performance, with a focus on North America and LATAM.</li>
+                        <li>Empowered commercial teams with tech skills to drive digital growth.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-top">
+                        <div class="job-company">DestinosTV <span class="job-role">| Director of Marketing &amp; Sales</span></div>
+                        <div class="job-date">2012 - 2013</div>
+                    </div>
+                    <p class="job-desc">Directed commercial strategy, marketing, sales, and business development for a multi-platform travel group spanning agency, broadcast, and digital operations.</p>
+                    <ul>
+                        <li>Increased travel agency sales 40% through pricing and cross-channel campaigns.</li>
+                        <li>Grew TV advertising revenue 26% via commercial repositioning and new partnerships.</li>
+                        <li>Built and led high-performing commercial and creative teams.</li>
+                        <li>Evaluated and launched new ventures through market analysis and financial modeling.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="section">
+                <div class="section-label">Education</div>
+                <div class="edu">
+                    <div class="edu-top">
+                        <div class="edu-degree">Master in International Relations</div>
+                        <div class="edu-date">2013 - 2014</div>
+                    </div>
+                    <div class="edu-school">Universidad Complutense de Madrid, Spain</div>
+                </div>
+                <div class="edu">
+                    <div class="edu-top">
+                        <div class="edu-degree">MBA - Master in Business Administration</div>
+                        <div class="edu-date">2008 - 2010</div>
+                    </div>
+                    <div class="edu-school">Universidad de Costa Rica</div>
+                </div>
+                <div class="edu">
+                    <div class="edu-top">
+                        <div class="edu-degree">Bachelor in Journalism</div>
+                        <div class="edu-date">2003 - 2005</div>
+                    </div>
+                    <div class="edu-school">Universidad Latina de Costa Rica</div>
+                </div>
+            </div>
+
+            <!-- Executive Skills -->
+            <div class="section">
+                <div class="section-label">Executive Skills</div>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <h4>Marketing &amp; Brand Leadership</h4>
+                        <p>Full-funnel strategy, brand positioning, omnichannel growth.</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Commercial &amp; P&amp;L Leadership</h4>
+                        <p>Revenue planning, forecasting, pricing, cross-functional alignment.</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Growth &amp; Demand Strategy</h4>
+                        <p>Acquisition, lifecycle marketing, conversion rate optimization.</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Go-To-Market &amp; Expansion</h4>
+                        <p>Market entry, localization, multiregional scaling.</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>E-Commerce &amp; Monetization</h4>
+                        <p>Pricing, UX optimization, channel mix, DTC growth.</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Technology &amp; Analytics</h4>
+                        <p>CRM, automation, A/B testing, data dashboards, AI integration.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tools & Technologies -->
+            <div class="section">
+                <div class="section-label">Tools &amp; Technologies</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">HubSpot</span>
+                    <span class="skill-tag">Salesforce</span>
+                    <span class="skill-tag">Microsoft Dynamics</span>
+                    <span class="skill-tag">MailChimp</span>
+                    <span class="skill-tag">Google Ads</span>
+                    <span class="skill-tag">Meta Ads Manager</span>
+                    <span class="skill-tag">LinkedIn CM</span>
+                    <span class="skill-tag">GA4</span>
+                    <span class="skill-tag">SEMrush</span>
+                    <span class="skill-tag">Hotjar</span>
+                    <span class="skill-tag">WordPress</span>
+                    <span class="skill-tag">Wix</span>
+                    <span class="skill-tag">Adobe CC</span>
+                    <span class="skill-tag">Canva</span>
+                    <span class="skill-tag">Asana</span>
+                    <span class="skill-tag">Monday.com</span>
+                    <span class="skill-tag">Trello</span>
+                    <span class="skill-tag">Slack</span>
+                    <span class="skill-tag">Claude</span>
+                    <span class="skill-tag">ChatGPT</span>
+                    <span class="skill-tag">Jasper</span>
+                    <span class="skill-tag">DeepSeek</span>
+                    <span class="skill-tag">MidJourney</span>
+                </div>
+            </div>
+
+            <!-- Industry Expertise -->
+            <div class="section">
+                <div class="section-label">Industry Expertise</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">Hospitality</span>
+                    <span class="skill-tag">Travel</span>
+                    <span class="skill-tag">Luxury Real Estate</span>
+                    <span class="skill-tag">Technology</span>
+                    <span class="skill-tag">FinTech</span>
+                    <span class="skill-tag">EdTech</span>
+                    <span class="skill-tag">Education</span>
+                    <span class="skill-tag">NGOs</span>
+                    <span class="skill-tag">Retail</span>
+                </div>
+            </div>
+
+            <!-- Languages -->
+            <div class="section">
+                <div class="section-label">Languages</div>
+                <div class="lang-list">
+                    <div class="lang-item">English <span class="lang-level">(Expert)</span></div>
+                    <div class="lang-item">Spanish <span class="lang-level">(Native)</span></div>
+                    <div class="lang-item">French <span class="lang-level">(Native)</span></div>
+                    <div class="lang-item">Italian <span class="lang-level">(Fluent)</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <span class="logo-sm">MintAds</span>
+            <span class="conf">Confidential</span>
+        </div>
+    </div>
+</body>
+</html>
