@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todor Todorov - Resume | MintAds</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, sans-serif; background: #f0f0f0; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        .page { max-width: 820px; margin: 40px auto; background: #fff; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+
+        /* Header */
+        .header { background: #060C14; padding: 44px 52px 38px; position: relative; }
+        .logo { font-size: 10px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: #00C896; margin-bottom: 22px; }
+        .name { font-size: 30px; font-weight: 700; color: #fff; margin-bottom: 6px; letter-spacing: -0.3px; }
+        .headline { font-size: 14.5px; font-weight: 400; color: #94a3b8; margin-bottom: 20px; line-height: 1.5; }
+        .contact { display: flex; flex-wrap: wrap; gap: 18px; font-size: 12.5px; color: #94a3b8; }
+        .contact a { color: #94a3b8; text-decoration: none; transition: color 0.2s; }
+        .contact a:hover { color: #00C896; }
+        .mint-bar { height: 3px; background: linear-gradient(90deg, #00C896, #00a87d); position: absolute; bottom: 0; left: 0; right: 0; }
+
+        /* Body */
+        .body { padding: 38px 52px 48px; }
+
+        /* Sections */
+        .section { margin-bottom: 30px; }
+        .section:last-child { margin-bottom: 0; }
+        .section-label { font-size: 10.5px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #00C896; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1.5px solid #e5e7eb; }
+
+        /* Summary */
+        .summary { font-size: 13.5px; color: #374151; line-height: 1.75; }
+
+        /* Jobs */
+        .job { margin-bottom: 24px; }
+        .job:last-child { margin-bottom: 0; }
+        .job-top { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 2px; }
+        .job-company { font-size: 14px; font-weight: 600; color: #111827; }
+        .job-role { font-weight: 400; color: #6b7280; }
+        .job-date { font-size: 12px; color: #6b7280; white-space: nowrap; }
+        .job-location { font-size: 12px; color: #9ca3af; margin-bottom: 8px; }
+        .job ul { padding-left: 18px; }
+        .job li { font-size: 13px; color: #374151; line-height: 1.65; margin-bottom: 4px; }
+        .job-desc { font-size: 13px; color: #374151; line-height: 1.65; margin-bottom: 8px; }
+
+        /* Education */
+        .edu { margin-bottom: 14px; }
+        .edu:last-child { margin-bottom: 0; }
+        .edu-top { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; }
+        .edu-degree { font-size: 13.5px; font-weight: 600; color: #111827; }
+        .edu-date { font-size: 12px; color: #6b7280; }
+        .edu-school { font-size: 12.5px; color: #6b7280; }
+
+        /* Skills */
+        .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .skill-item h4 { font-size: 12.5px; font-weight: 600; color: #111827; margin-bottom: 3px; }
+        .skill-item p { font-size: 12px; color: #6b7280; line-height: 1.55; }
+        .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+        .skill-tag { font-size: 11.5px; color: #374151; background: #f3f4f6; padding: 4px 10px; border-radius: 4px; }
+
+        /* Languages */
+        .lang-list { display: flex; gap: 24px; flex-wrap: wrap; }
+        .lang-item { font-size: 13px; color: #374151; }
+        .lang-level { color: #6b7280; }
+
+        /* Courses */
+        .course-list { list-style: none; padding: 0; }
+        .course-list li { font-size: 12.5px; color: #374151; padding: 3px 0; }
+
+        /* Footer */
+        .footer { background: #060C14; padding: 14px 52px; display: flex; justify-content: space-between; align-items: center; }
+        .footer .logo-sm { font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #00C896; }
+        .footer .conf { font-size: 9px; color: #475569; letter-spacing: 0.5px; }
+
+        /* Print */
+        @media print {
+            body { background: #fff; }
+            .page { margin: 0; box-shadow: none; }
+        }
+        @media (max-width: 640px) {
+            .header, .body, .footer { padding-left: 24px; padding-right: 24px; }
+            .name { font-size: 24px; }
+            .skills-grid { grid-template-columns: 1fr; }
+            .contact { flex-direction: column; gap: 6px; }
+            .job-top, .edu-top { flex-direction: column; gap: 2px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="header">
+            <div class="logo">MintAds</div>
+            <div class="name">Todor (Ted) Todorov</div>
+            <div class="headline">Marketing Manager</div>
+            <div class="contact">
+                <span>Bulgaria</span>
+            </div>
+            <div class="mint-bar"></div>
+        </div>
+
+        <div class="body">
+            <!-- Professional Summary -->
+            <div class="section">
+                <div class="section-label">Professional Summary</div>
+                <p class="summary">Experienced Marketing Manager with a strong track record in digital strategy, performance marketing, and brand development. Skilled in leading full-funnel campaigns, managing high-profile partnerships, and driving content across social, email, and video. With experience spanning B2B, B2C, and large-scale events, he combines data-driven decision-making with creative storytelling to grow brand visibility and engagement. Backed by a strong foundation in Public Relations and Business Management, he brings both strategic insight and operational expertise.</p>
+            </div>
+
+            <!-- Experience -->
+            <div class="section">
+                <div class="section-label">Professional Experience</div>
+
+                <div class="job">
+                    <div class="job-top">
+                        <div class="job-company">Tuk Tam <span class="job-role">| Marketing Manager</span></div>
+                        <div class="job-date">Apr 2025 - Oct 2025</div>
+                    </div>
+                    <div class="job-location">Bulgaria</div>
+                    <ul>
+                        <li>Led all marketing efforts for Tuk-Tam's flagship programs, including Kosher (Hive) business summit and Fond scholarship initiatives.</li>
+                        <li>Managed full-funnel digital advertising campaigns across Meta, LinkedIn, and Google, targeting students, professionals, and corporate partners.</li>
+                        <li>Directed the content strategy for social media, newsletters, and video, collaborating closely with in-house creators and external agencies.</li>
+                        <li>Developed and maintained strategic partnerships with brands such as Postbank, Mastercard, NOVA, and NetInfo to support co-branded campaigns and sponsorships.</li>
+                        <li>Utilized GA4, GTM, and custom dashboards to monitor WAU, CTR, and conversions, optimizing CPA across key audience segments.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-top">
+                        <div class="job-company">Broks Vision <span class="job-role">| Digital Marketing Manager</span></div>
+                        <div class="job-date">May 2022 - Apr 2025</div>
+                    </div>
+                    <ul>
+                        <li>Led performance and content marketing for diverse B2B and B2C clients in sectors like technology, pharma, and retail.</li>
+                        <li>Created full-funnel strategies for brands from ideation to execution.</li>
+                        <li>Planned and optimized Meta, Google, and LinkedIn Ads, managing budgets, creatives, and conversions.</li>
+                        <li>Developed content calendars, storytelling formats, and brand messaging frameworks tailored to each audience and platform.</li>
+                        <li>Used GA4, GTM, Looker Studio, and custom dashboards to track performance, report KPIs, and refine targeting strategies.</li>
+                        <li>Supervised creative production, coordinated with designers, copywriters, and video creators for over 10 clients.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-top">
+                        <div class="job-company">356labs <span class="job-role">| Digital Marketing Manager</span></div>
+                        <div class="job-date">Jul 2021 - May 2022</div>
+                    </div>
+                    <div class="job-location">Bulgaria</div>
+                    <ul>
+                        <li>Managed digital marketing for 356labs and the Present to Succeed conference, one of the world's most significant events on presentation skills.</li>
+                        <li>Crafted and executed paid and organic campaigns targeting global audiences.</li>
+                        <li>Built automated email workflows and nurture sequences with tailored segmentation for speakers, attendees, and partners.</li>
+                        <li>Created landing pages and optimized conversion paths using A/B testing and behavioral insights.</li>
+                        <li>Oversaw the event's online visibility, from partnerships and PR coverage to remarketing and influencer outreach.</li>
+                        <li>Analyzed attendee data, CTR, conversion rates, and sales to fine-tune messaging and creative direction.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-top">
+                        <div class="job-company">eSky Group <span class="job-role">| Social Media &amp; Digital Marketing Specialist</span></div>
+                        <div class="job-date">Jul 2014 - Jul 2021</div>
+                    </div>
+                    <div class="job-location">Bulgaria</div>
+                    <ul>
+                        <li>Progressively grew from Digital Marketing Specialist to Senior Social Media Specialist for Europe, leading strategy across 10+ markets.</li>
+                        <li>Drove end-to-end digital marketing: email marketing, affiliate programs, social media, paid media, display advertising, content creation, and campaign coordination.</li>
+                        <li>Developed multi-market campaigns for flight and travel deals, increasing traffic and bookings during seasonal peaks.</li>
+                        <li>Built and maintained affiliate partnerships with travel influencers and content platforms.</li>
+                        <li>Managed paid campaigns (Meta, GDN, YouTube) with clear KPIs on ROAS and customer acquisition.</li>
+                        <li>Created content calendars and localization strategies in coordination with regional teams.</li>
+                        <li>Collaborated cross-functionally with IT, sales, and creative to align digital efforts with business goals.</li>
+                        <li>Promoted to senior roles based on performance, initiative, and cross-border campaign impact.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="section">
+                <div class="section-label">Education</div>
+                <div class="edu">
+                    <div class="edu-top">
+                        <div class="edu-degree">Bachelor's in Public Relations</div>
+                    </div>
+                    <div class="edu-school">St. Cyril and St. Methodius University of Veliko Tarnovo</div>
+                </div>
+                <div class="edu">
+                    <div class="edu-top">
+                        <div class="edu-degree">Business, Management, Marketing (Erasmus)</div>
+                    </div>
+                    <div class="edu-school">Jagiellonian University, Krakow</div>
+                </div>
+                <div class="edu">
+                    <div class="edu-top">
+                        <div class="edu-degree">High School for Romance Languages - Foreign Languages (French, English)</div>
+                    </div>
+                    <div class="edu-school">"Georgi Stoykov Rakovski", Burgas</div>
+                </div>
+            </div>
+
+            <!-- Core Competencies -->
+            <div class="section">
+                <div class="section-label">Core Competencies</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">Brand Management</span>
+                    <span class="skill-tag">Market Analysis</span>
+                    <span class="skill-tag">SEO Optimization</span>
+                    <span class="skill-tag">Campaign Strategy</span>
+                    <span class="skill-tag">Project Management</span>
+                    <span class="skill-tag">Paid Ads (Meta, Google)</span>
+                    <span class="skill-tag">Content Strategy</span>
+                    <span class="skill-tag">Creative Writing</span>
+                    <span class="skill-tag">Email Marketing</span>
+                </div>
+            </div>
+
+            <!-- Tech Tools & Platforms -->
+            <div class="section">
+                <div class="section-label">Tech Tools &amp; Platforms</div>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <h4>Paid Advertising &amp; Growth</h4>
+                        <p>Meta Ads Manager, Google Ads, Microsoft/Bing Ads, LinkedIn Campaign Manager, TikTok Ads Manager, Reddit Ads, Quora Ads</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Email Marketing, CRM &amp; Automation</h4>
+                        <p>MailerLite, Mailchimp, GetResponse, SALESmanago, iPresso, HubSpot, Salesforce</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Analytics, Tracking &amp; Reporting</h4>
+                        <p>Google Analytics 4 (GA4), Google Tag Manager (GTM), Google Looker Studio, Piwik/Matomo Analytics, Hotjar, Microsoft Clarity, Meta Events Manager, Google Search Console</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Project Management &amp; Collaboration</h4>
+                        <p>Microsoft 365/SharePoint, Google Workspace, Slack, Trello, Asana, Notion, Ora</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>CMS, Website &amp; E-commerce</h4>
+                        <p>Shopify, WordPress</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Content, Visuals &amp; Creative</h4>
+                        <p>Adobe Premiere Pro, Adobe Premiere Rush, DaVinci Resolve, Adobe Lightroom</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Additional</h4>
+                        <p>HTML (custom newsletter edits), CSS (light styling), Zapier (automation between systems)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <span class="logo-sm">MintAds</span>
+            <span class="conf">Confidential</span>
+        </div>
+    </div>
+</body>
+</html>
