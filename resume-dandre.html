@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D'Andre Fraser - Resume | MintAds</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, sans-serif; background: #f0f0f0; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        .page { max-width: 820px; margin: 40px auto; background: #fff; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+
+        /* Header */
+        .header { background: #060C14; padding: 44px 52px 38px; position: relative; }
+        .logo { font-size: 10px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: #00C896; margin-bottom: 22px; }
+        .name { font-size: 30px; font-weight: 700; color: #fff; margin-bottom: 6px; letter-spacing: -0.3px; }
+        .headline { font-size: 14.5px; font-weight: 400; color: #94a3b8; margin-bottom: 20px; line-height: 1.5; }
+        .contact { display: flex; flex-wrap: wrap; gap: 18px; font-size: 12.5px; color: #94a3b8; }
+        .contact a { color: #94a3b8; text-decoration: none; transition: color 0.2s; }
+        .contact a:hover { color: #00C896; }
+        .mint-bar { height: 3px; background: linear-gradient(90deg, #00C896, #00a87d); position: absolute; bottom: 0; left: 0; right: 0; }
+
+        /* Body */
+        .body { padding: 38px 52px 48px; }
+
+        /* Sections */
+        .section { margin-bottom: 30px; }
+        .section:last-child { margin-bottom: 0; }
+        .section-label { font-size: 10.5px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #00C896; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1.5px solid #e5e7eb; }
+
+        /* Summary */
+        .summary { font-size: 13.5px; color: #374151; line-height: 1.75; }
+
+        /* Jobs */
+        .job { margin-bottom: 24px; }
+        .job:last-child { margin-bottom: 0; }
+        .job-top { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 2px; }
+        .job-company { font-size: 14px; font-weight: 600; color: #111827; }
+        .job-role { font-weight: 400; color: #6b7280; }
+        .job-date { font-size: 12px; color: #6b7280; white-space: nowrap; }
+        .job-location { font-size: 12px; color: #9ca3af; margin-bottom: 8px; }
+        .job ul { padding-left: 18px; }
+        .job li { font-size: 13px; color: #374151; line-height: 1.65; margin-bottom: 4px; }
+        .job-desc { font-size: 13px; color: #374151; line-height: 1.65; margin-bottom: 8px; }
+
+        /* Education */
+        .edu { margin-bottom: 14px; }
+        .edu:last-child { margin-bottom: 0; }
+        .edu-top { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; }
+        .edu-degree { font-size: 13.5px; font-weight: 600; color: #111827; }
+        .edu-date { font-size: 12px; color: #6b7280; }
+        .edu-school { font-size: 12.5px; color: #6b7280; }
+
+        /* Skills */
+        .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .skill-item h4 { font-size: 12.5px; font-weight: 600; color: #111827; margin-bottom: 3px; }
+        .skill-item p { font-size: 12px; color: #6b7280; line-height: 1.55; }
+        .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+        .skill-tag { font-size: 11.5px; color: #374151; background: #f3f4f6; padding: 4px 10px; border-radius: 4px; }
+
+        /* Languages */
+        .lang-list { display: flex; gap: 24px; flex-wrap: wrap; }
+        .lang-item { font-size: 13px; color: #374151; }
+        .lang-level { color: #6b7280; }
+
+        /* Courses */
+        .course-list { list-style: none; padding: 0; }
+        .course-list li { font-size: 12.5px; color: #374151; padding: 3px 0; }
+
+        /* Footer */
+        .footer { background: #060C14; padding: 14px 52px; display: flex; justify-content: space-between; align-items: center; }
+        .footer .logo-sm { font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #00C896; }
+        .footer .conf { font-size: 9px; color: #475569; letter-spacing: 0.5px; }
+
+        /* Print */
+        @media print {
+            body { background: #fff; }
+            .page { margin: 0; box-shadow: none; }
+        }
+        @media (max-width: 640px) {
+            .header, .body, .footer { padding-left: 24px; padding-right: 24px; }
+            .name { font-size: 24px; }
+            .skills-grid { grid-template-columns: 1fr; }
+            .contact { flex-direction: column; gap: 6px; }
+            .job-top, .edu-top { flex-direction: column; gap: 2px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="header">
+            <div class="logo">MintAds</div>
+            <div class="name">D'Andre Fraser</div>
+            <div class="headline">Head of Performance Marketing</div>
+            <div class="contact">
+                <span>Kingston, Jamaica</span>
+                <span>dandrefraser@gmail.com</span>
+                <span>+1 876 538 0299</span>
+                <a href="https://linkedin.com/in/dandrefraser">linkedin.com/in/dandrefraser</a>
+            </div>
+            <div class="mint-bar"></div>
+        </div>
+
+        <div class="body">
+            <!-- Professional Summary -->
+            <div class="section">
+                <div class="section-label">Professional Summary</div>
+                <p class="summary">Digital marketing leader with 10+ years driving paid media and multi-channel campaigns, including Google and LinkedIn Ads, for consumer and travel brands. Proven success managing enterprise budgets, leading cross-functional teams, and delivering revenue growth and retention. Skilled in P&L ownership, client advisory, and aligning paid media strategies with business outcomes.</p>
+            </div>
+
+            <!-- Experience -->
+            <div class="section">
+                <div class="section-label">Professional Experience</div>
+
+                <div class="job">
+                    <div class="job-top">
+                        <div class="job-company">Yello Media Group <span class="job-role">| Head of Performance Marketing</span></div>
+                        <div class="job-date">Aug 2021 - May 2025</div>
+                    </div>
+                    <div class="job-location">Remote (Cayman Islands)</div>
+                    <ul>
+                        <li>Owned the global paid media strategy for one of the Caribbean's leading adventure tourism operators across multiple destinations including United States, Canada, Europe, Jamaica, Belize, Turks and Caicos, and the Dominican Republic.</li>
+                        <li>Designed and deployed full-funnel GTM automation across HubSpot and Salesforce to streamline lead routing, scoring, lifecycle tracking, and revenue attribution for brands such as Toyota Jamaica, Chukka Adventures, Sagicor Insurance, National Commercial Bank and ICBL.</li>
+                        <li>Increased year over year revenue by 71 percent over an 18 month period through structural campaign redesign, value based bidding, and conversion hygiene improvements for blue chip hospitality client.</li>
+                        <li>Built destination-level campaign architecture separating brand, non brand, and activity specific campaigns to protect profitability and improve forecasting accuracy.</li>
+                        <li>Aligned paid media strategy with operational capacity and seasonal tourism cycles to ensure marketing did not outpace fulfillment capability.</li>
+                        <li>Partnered with executive leadership to translate media performance into revenue forecasting, margin protection, and expansion strategy.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-top">
+                        <div class="job-company">Local Web Leads <span class="job-role">| Senior PPC Engineer</span></div>
+                        <div class="job-date">Aug 2022 - Jan 2026</div>
+                    </div>
+                    <div class="job-location">Remote (Austin, TX)</div>
+                    <ul>
+                        <li>Architected automated reporting ecosystems integrating WhatConverts, Gravity Forms, CallRail, and GA4 into CRM workflows for Pool construction clients across Florida, Arizona and Texas.</li>
+                        <li>Reduced manual reporting time by 70% through automation and structured data pipelines.</li>
+                        <li>Built custom lead scoring models and lifecycle routing logic to improve SQL quality and sales alignment.</li>
+                        <li>Designed attribution frameworks mapping marketing signals to deal outcomes and revenue impact.</li>
+                        <li>Implemented alert systems and rule-based workflows to maintain data hygiene and prevent lead leakage.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-top">
+                        <div class="job-company">ITEL BPO <span class="job-role">| Performance Marketing Manager</span></div>
+                        <div class="job-date">Aug 2018 - Apr 2021</div>
+                    </div>
+                    <div class="job-location">Kingston, Jamaica</div>
+                    <ul>
+                        <li>Built, managed and scaled regional and global paid media campaigns for BMW Caribbean, Porsche Caribbean, Kia Jamaica and Honda Jamaica.</li>
+                        <li>Developed integrated demand generation strategies and executive reporting dashboards tied directly to revenue and pipeline performance.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="section">
+                <div class="section-label">Education</div>
+                <div class="edu">
+                    <div class="edu-top">
+                        <div class="edu-degree">MBA in Business</div>
+                        <div class="edu-date">Sep 2023 - Nov 2024</div>
+                    </div>
+                    <div class="edu-school">European Business School of Barcelona, Spain</div>
+                </div>
+                <div class="edu">
+                    <div class="edu-top">
+                        <div class="edu-degree">BSc in Marketing</div>
+                        <div class="edu-date">Aug 2010 - Nov 2014</div>
+                    </div>
+                    <div class="edu-school">University of the West Indies, Jamaica</div>
+                </div>
+            </div>
+
+            <!-- Skills -->
+            <div class="section">
+                <div class="section-label">Skills</div>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <h4>Paid Media Management</h4>
+                        <p>Multi-channel paid media strategy across Google, LinkedIn, Programmatic, and Meta with direct accountability for pipeline growth, revenue impact, and performance scalability.</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>P&L & Budget Management</h4>
+                        <p>Enterprise budgets exceeding $75K per month per account with full responsibility for margin protection, forecasting, and revenue alignment.</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Revenue Growth & Retention</h4>
+                        <p>Drive NRR through expansion planning, churn risk identification, and aligning paid media performance to pipeline and renewal outcomes.</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Team Leadership</h4>
+                        <p>Lead and coach senior paid media managers, establish accountability frameworks, and build scalable systems that protect performance quality.</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Client Advisory</h4>
+                        <p>Trusted advisor to CMOs and Revenue leaders, translating paid media performance into pipeline, ROI, and business impact.</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Data Analysis & Reporting</h4>
+                        <p>Translate campaign data into executive-level insights tied to pipeline, revenue forecasting, and strategic growth decisions.</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Digital Marketing Strategy</h4>
+                        <p>Define long-term paid media vision, quarterly priorities, KPIs, and scalable service frameworks aligned to B2B growth objectives.</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>SEO & Website Optimization</h4>
+                        <p>Align paid acquisition with CRO, conversion hygiene, and on-site optimization to improve pipeline efficiency and revenue yield.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <span class="logo-sm">MintAds</span>
+            <span class="conf">Confidential</span>
+        </div>
+    </div>
+</body>
+</html>
