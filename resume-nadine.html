@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nadine Lopes Dias Ueno - Resume | MintAds</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, sans-serif; background: #f0f0f0; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        .page { max-width: 820px; margin: 40px auto; background: #fff; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+
+        /* Header */
+        .header { background: #060C14; padding: 44px 52px 38px; position: relative; }
+        .logo { font-size: 10px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: #00C896; margin-bottom: 22px; }
+        .name { font-size: 30px; font-weight: 700; color: #fff; margin-bottom: 6px; letter-spacing: -0.3px; }
+        .headline { font-size: 14.5px; font-weight: 400; color: #94a3b8; margin-bottom: 20px; line-height: 1.5; }
+        .contact { display: flex; flex-wrap: wrap; gap: 18px; font-size: 12.5px; color: #94a3b8; }
+        .contact a { color: #94a3b8; text-decoration: none; transition: color 0.2s; }
+        .contact a:hover { color: #00C896; }
+        .mint-bar { height: 3px; background: linear-gradient(90deg, #00C896, #00a87d); position: absolute; bottom: 0; left: 0; right: 0; }
+
+        /* Body */
+        .body { padding: 38px 52px 48px; }
+
+        /* Sections */
+        .section { margin-bottom: 30px; }
+        .section:last-child { margin-bottom: 0; }
+        .section-label { font-size: 10.5px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #00C896; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1.5px solid #e5e7eb; }
+
+        /* Summary */
+        .summary { font-size: 13.5px; color: #374151; line-height: 1.75; }
+
+        /* Jobs */
+        .job { margin-bottom: 24px; }
+        .job:last-child { margin-bottom: 0; }
+        .job-top { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 2px; }
+        .job-company { font-size: 14px; font-weight: 600; color: #111827; }
+        .job-role { font-weight: 400; color: #6b7280; }
+        .job-date { font-size: 12px; color: #6b7280; white-space: nowrap; }
+        .job-location { font-size: 12px; color: #9ca3af; margin-bottom: 8px; }
+        .job ul { padding-left: 18px; }
+        .job li { font-size: 13px; color: #374151; line-height: 1.65; margin-bottom: 4px; }
+        .job-desc { font-size: 13px; color: #374151; line-height: 1.65; margin-bottom: 8px; }
+
+        /* Education */
+        .edu { margin-bottom: 14px; }
+        .edu:last-child { margin-bottom: 0; }
+        .edu-top { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; }
+        .edu-degree { font-size: 13.5px; font-weight: 600; color: #111827; }
+        .edu-date { font-size: 12px; color: #6b7280; }
+        .edu-school { font-size: 12.5px; color: #6b7280; }
+
+        /* Skills */
+        .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .skill-item h4 { font-size: 12.5px; font-weight: 600; color: #111827; margin-bottom: 3px; }
+        .skill-item p { font-size: 12px; color: #6b7280; line-height: 1.55; }
+        .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+        .skill-tag { font-size: 11.5px; color: #374151; background: #f3f4f6; padding: 4px 10px; border-radius: 4px; }
+
+        /* Languages */
+        .lang-list { display: flex; gap: 24px; flex-wrap: wrap; }
+        .lang-item { font-size: 13px; color: #374151; }
+        .lang-level { color: #6b7280; }
+
+        /* Courses */
+        .course-list { list-style: none; padding: 0; }
+        .course-list li { font-size: 12.5px; color: #374151; padding: 3px 0; }
+
+        /* Footer */
+        .footer { background: #060C14; padding: 14px 52px; display: flex; justify-content: space-between; align-items: center; }
+        .footer .logo-sm { font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #00C896; }
+        .footer .conf { font-size: 9px; color: #475569; letter-spacing: 0.5px; }
+
+        /* Print */
+        @media print {
+            body { background: #fff; }
+            .page { margin: 0; box-shadow: none; }
+        }
+        @media (max-width: 640px) {
+            .header, .body, .footer { padding-left: 24px; padding-right: 24px; }
+            .name { font-size: 24px; }
+            .skills-grid { grid-template-columns: 1fr; }
+            .contact { flex-direction: column; gap: 6px; }
+            .job-top, .edu-top { flex-direction: column; gap: 2px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="header">
+            <div class="logo">MintAds</div>
+            <div class="name">Nadine Lopes Dias Ueno</div>
+            <div class="headline">Media Strategy | Marketing | Operations Excellence</div>
+            <div class="contact">
+                <span>Sao Paulo, SP, Brazil</span>
+                <span>nadine_dias@hotmail.com</span>
+                <span>+55 (11) 9 8845-6054</span>
+                <a href="https://linkedin.com/in/nadineldu">linkedin.com/in/nadineldu</a>
+            </div>
+            <div class="mint-bar"></div>
+        </div>
+
+        <div class="body">
+            <!-- Professional Summary -->
+            <div class="section">
+                <div class="section-label">Professional Summary</div>
+                <p class="summary">With over 8 years of experience leading media strategy and operations for world-class brands, I specialize in developing and executing high-impact campaigns that generate measurable ROAS across digital and traditional channels. Throughout my career at global giants such as IPG, WPP, Publicis Groupe, and Cheil, I have managed substantial media budgets and led high-performance teams for brands like Bradesco, Bayer, Samsung, L'Oreal, and Mercado Livre. My approach combines strategic thinking, advanced analytics, and a deep understanding of consumer behavior to deliver campaigns that not only meet goals, but exceed them.</p>
+            </div>
+
+            <!-- What I Bring to the Table -->
+            <div class="section">
+                <div class="section-label">Core Competencies</div>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <h4>Media Buying &amp; Strategic Planning</h4>
+                        <p>Specialist in developing omnichannel strategies, programmatic advertising, and traditional media across digital and offline channels.</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Data-Driven Optimization</h4>
+                        <p>Postgraduate degree in Data Science, Analytics, and AI from FIA Business School, applying cutting-edge insights to campaign performance.</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Leadership &amp; Team Development</h4>
+                        <p>Experience building, training, and mentoring media teams of 6 to 13+ people, promoting innovation and operational excellence.</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Innovation &amp; Process Optimization</h4>
+                        <p>Passionate about identifying automation opportunities and implementing AI solutions to improve efficiency and results.</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Cross-Functional Collaboration</h4>
+                        <p>Skilled in working with C-level stakeholders, creative teams, and suppliers to align strategies and deliver cohesive campaigns.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience -->
+            <div class="section">
+                <div class="section-label">Professional Experience</div>
+
+                <div class="job">
+                    <div class="job-top">
+                        <div class="job-company">Educa Insights <span class="job-role">| Media Consultancy (Freelancer)</span></div>
+                        <div class="job-date">Oct 2025 - Present</div>
+                    </div>
+                    <ul>
+                        <li>Responsible for subscriber acquisition strategies for intake across 23 colleges throughout Brazil.</li>
+                        <li>Optimization of media processes and management of the media team.</li>
+                        <li>Budget optimization and innovation research for paid media.</li>
+                        <li>Management and creation of results dashboards; War Room support with clients.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-top">
+                        <div class="job-company">Stealth Company <span class="job-role">| Manager - Operations (Temporary)</span></div>
+                        <div class="job-date">Feb 2025 - Feb 2026</div>
+                    </div>
+                    <ul>
+                        <li>Created processes for a White Label company to optimize resources and improve customer relationships.</li>
+                        <li>Customer quality management, developing strategies to increase LTV and quality.</li>
+                        <li>Creation and research of AI for application in optimized work routines. North American market only.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-top">
+                        <div class="job-company">Mediabrands - IPG <span class="job-role">| PMO</span></div>
+                        <div class="job-date">Jul 2024 - Jan 2025</div>
+                    </div>
+                    <ul>
+                        <li>Optimized and standardized processes to ensure excellence in execution and operational efficiency.</li>
+                        <li>Implemented project management methodologies, performance measurement, and progress reporting.</li>
+                        <li>Liaised with project leaders, key stakeholders, and digital teams. Member of the regional digital team.</li>
+                        <li>Clients: Mercado Libre and Mercado Pago.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-top">
+                        <div class="job-company">WPP Media Services <span class="job-role">| Media Strategy Director</span></div>
+                        <div class="job-date">Jul 2023 - Jun 2024</div>
+                    </div>
+                    <ul>
+                        <li>Managed Comms Planning and Investment fronts within the WMS Product team, a cross-agency unit across F.biz, Grey, VML, Mutato, and Ogilvy.</li>
+                        <li>Developed media teams through training, methodologies, and strategic client follow-up.</li>
+                        <li>Promoted innovation and disruptive thinking in media; defined teams and fee proposals with local and regional teams.</li>
+                        <li>Clients: All WPP group clients (5 agencies).</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-top">
+                        <div class="job-company">Cheil Brasil <span class="job-role">| Performance Marketing Center Manager</span></div>
+                        <div class="job-date">Mar 2023 - Jul 2023</div>
+                    </div>
+                    <ul>
+                        <li>Led the performance center managing data and insights, UX/UI, and media teams.</li>
+                        <li>Contributed to the strategic process through research design, analysis, and intelligence support.</li>
+                        <li>Identified automation and optimization opportunities for continuous improvement. Client: Samsung.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-top">
+                        <div class="job-company">One <span class="job-role">| Media Manager</span></div>
+                        <div class="job-date">Mar 2022 - Mar 2023</div>
+                    </div>
+                    <ul>
+                        <li>Managed a 6-person media team for acquisition marketing, strategy, execution, and optimization across all channels.</li>
+                        <li>Led team defining roles, responsibilities, objectives, and guiding execution of activities and delivery of results.</li>
+                        <li>Monitored and analyzed key campaign KPIs with Planning and Digital Operations, recommending continuous improvements.</li>
+                        <li>Assisted in planning for pitches with the board of directors. Clients: Bradesco and Bayer.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-top">
+                        <div class="job-company">Frat Digital <span class="job-role">| Performance Manager</span></div>
+                        <div class="job-date">Nov 2019 - Nov 2021</div>
+                    </div>
+                    <ul>
+                        <li>Led a team of 9 people, developing strategies that generate new leads and customers through digital campaigns.</li>
+                        <li>Managed the performance department for acquisition marketing, strategy, execution, and optimization across all channels.</li>
+                        <li>Identified trends, generated insights, and proactively engaged solutions to optimize processes.</li>
+                        <li>Clients: Varied segments, 20% B2B and 80% B2C.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-top">
+                        <div class="job-company">Fess'Kobbi Comunicacao <span class="job-role">| Account Manager</span></div>
+                        <div class="job-date">May 2018 - May 2019</div>
+                    </div>
+                    <ul>
+                        <li>Account management for segmented core accounts with a team of 7 people; delivery of digital and offline campaigns.</li>
+                        <li>BI analysis using DMP and DSP tools; management of systems for real-time data delivery.</li>
+                        <li>Billing responsibilities including cash flow control, financial adjustments, and quarterly projections.</li>
+                        <li>Clients: Cruzeiro do Sul Group, Methodist College, Sao Judas College, and SEB Group.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="section">
+                <div class="section-label">Education</div>
+                <div class="edu">
+                    <div class="edu-top">
+                        <div class="edu-degree">Postgraduate in Data Science with Artificial Intelligence</div>
+                        <div class="edu-date">2024</div>
+                    </div>
+                    <div class="edu-school">FIA Business School</div>
+                </div>
+                <div class="edu">
+                    <div class="edu-top">
+                        <div class="edu-degree">Bachelor's Degree in Advertising and Public Relations</div>
+                        <div class="edu-date">2013</div>
+                    </div>
+                    <div class="edu-school">Santa Cecilia University</div>
+                </div>
+            </div>
+
+            <!-- Languages -->
+            <div class="section">
+                <div class="section-label">Languages</div>
+                <div class="lang-list">
+                    <div class="lang-item">English <span class="lang-level">- Proficient</span></div>
+                    <div class="lang-item">Spanish <span class="lang-level">- Intermediate</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <span class="logo-sm">MintAds</span>
+            <span class="conf">Confidential</span>
+        </div>
+    </div>
+</body>
+</html>
