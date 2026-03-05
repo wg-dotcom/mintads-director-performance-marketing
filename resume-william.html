@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>William Kawaguchi - Resume | MintAds</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, sans-serif; background: #f0f0f0; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        .page { max-width: 820px; margin: 40px auto; background: #fff; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+
+        /* Header */
+        .header { background: #060C14; padding: 44px 52px 38px; position: relative; }
+        .logo { font-size: 10px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: #00C896; margin-bottom: 22px; }
+        .name { font-size: 30px; font-weight: 700; color: #fff; margin-bottom: 6px; letter-spacing: -0.3px; }
+        .headline { font-size: 14.5px; font-weight: 400; color: #94a3b8; margin-bottom: 20px; line-height: 1.5; }
+        .contact { display: flex; flex-wrap: wrap; gap: 18px; font-size: 12.5px; color: #94a3b8; }
+        .contact a { color: #94a3b8; text-decoration: none; transition: color 0.2s; }
+        .contact a:hover { color: #00C896; }
+        .mint-bar { height: 3px; background: linear-gradient(90deg, #00C896, #00a87d); position: absolute; bottom: 0; left: 0; right: 0; }
+
+        /* Body */
+        .body { padding: 38px 52px 48px; }
+
+        /* Sections */
+        .section { margin-bottom: 30px; }
+        .section:last-child { margin-bottom: 0; }
+        .section-label { font-size: 10.5px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #00C896; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1.5px solid #e5e7eb; }
+
+        /* Summary */
+        .summary { font-size: 13.5px; color: #374151; line-height: 1.75; }
+
+        /* Jobs */
+        .job { margin-bottom: 24px; }
+        .job:last-child { margin-bottom: 0; }
+        .job-top { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 2px; }
+        .job-company { font-size: 14px; font-weight: 600; color: #111827; }
+        .job-role { font-weight: 400; color: #6b7280; }
+        .job-date { font-size: 12px; color: #6b7280; white-space: nowrap; }
+        .job-location { font-size: 12px; color: #9ca3af; margin-bottom: 8px; }
+        .job ul { padding-left: 18px; }
+        .job li { font-size: 13px; color: #374151; line-height: 1.65; margin-bottom: 4px; }
+        .job-desc { font-size: 13px; color: #374151; line-height: 1.65; margin-bottom: 8px; }
+
+        /* Education */
+        .edu { margin-bottom: 14px; }
+        .edu:last-child { margin-bottom: 0; }
+        .edu-top { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; }
+        .edu-degree { font-size: 13.5px; font-weight: 600; color: #111827; }
+        .edu-date { font-size: 12px; color: #6b7280; }
+        .edu-school { font-size: 12.5px; color: #6b7280; }
+
+        /* Skills */
+        .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .skill-item h4 { font-size: 12.5px; font-weight: 600; color: #111827; margin-bottom: 3px; }
+        .skill-item p { font-size: 12px; color: #6b7280; line-height: 1.55; }
+        .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+        .skill-tag { font-size: 11.5px; color: #374151; background: #f3f4f6; padding: 4px 10px; border-radius: 4px; }
+
+        /* Languages */
+        .lang-list { display: flex; gap: 24px; flex-wrap: wrap; }
+        .lang-item { font-size: 13px; color: #374151; }
+        .lang-level { color: #6b7280; }
+
+        /* Courses */
+        .course-list { list-style: none; padding: 0; }
+        .course-list li { font-size: 12.5px; color: #374151; padding: 3px 0; }
+
+        /* Footer */
+        .footer { background: #060C14; padding: 14px 52px; display: flex; justify-content: space-between; align-items: center; }
+        .footer .logo-sm { font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #00C896; }
+        .footer .conf { font-size: 9px; color: #475569; letter-spacing: 0.5px; }
+
+        /* Print */
+        @media print {
+            body { background: #fff; }
+            .page { margin: 0; box-shadow: none; }
+        }
+        @media (max-width: 640px) {
+            .header, .body, .footer { padding-left: 24px; padding-right: 24px; }
+            .name { font-size: 24px; }
+            .skills-grid { grid-template-columns: 1fr; }
+            .contact { flex-direction: column; gap: 6px; }
+            .job-top, .edu-top { flex-direction: column; gap: 2px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="header">
+            <div class="logo">MintAds</div>
+            <div class="name">William Kawaguchi</div>
+            <div class="headline">Director of Performance Marketing | DTC E-Commerce Specialist | Affiliate &amp; Influencer Marketing Expert</div>
+            <div class="contact">
+                <span>Sao Paulo, Brazil</span>
+                <span>William.kawaguchi@yahoo.com.br</span>
+                <span>+55 11 97398-6572</span>
+                <a href="https://linkedin.com/in/william-kawaguchi">linkedin.com/in/william-kawaguchi</a>
+            </div>
+            <div class="mint-bar"></div>
+        </div>
+
+        <div class="body">
+            <!-- Professional Summary -->
+            <div class="section">
+                <div class="section-label">Professional Summary</div>
+                <p class="summary">Results-driven Performance Marketing Director with 10+ years of progressive experience scaling high-velocity DTC e-commerce operations, managing $100K+ daily performance marketing budgets, and building world-class teams across affiliate and influencer networks. Proven expertise in P&amp;L ownership, campaign profitability optimization, and driving 20%+ efficiency improvements across multi-region operations. Data-first operator with deep proficiency in CRM systems, BigQuery analytics, and AI-powered campaign analysis. Demonstrated success leading teams of 6-10+ high-performing specialists in 24/7/365 e-commerce environments, delivering consistent ROI improvements and managing complex funnel operations at massive scale.</p>
+            </div>
+
+            <!-- Experience -->
+            <div class="section">
+                <div class="section-label">Professional Experience</div>
+
+                <div class="job">
+                    <div class="job-top">
+                        <div class="job-company">Kaspersky <span class="job-role">| Communication Planning Manager (B2C Americas and B2B Global)</span></div>
+                        <div class="job-date">Jun 2021 - Present</div>
+                    </div>
+                    <ul>
+                        <li>Architected global paid media ecosystems across affiliate and influencer networks, managing $10M+ monthly performance marketing investments to drive user acquisition at scale.</li>
+                        <li>Led high-impact product launches and performance campaigns, ensuring multi-dimensional execution strategy and consistency across consumer touchpoints.</li>
+                        <li>Delivered comprehensive performance reports and strategic recommendations to C-suite executives, utilizing advanced A/B testing frameworks and data-driven insights.</li>
+                        <li>Managed affiliate partner relationships and influencer network performance, optimizing traffic quality and ROI across high-volume channels.</li>
+                        <li>Implemented AI-powered analytics workflows using CRM data and advanced attribution modeling to identify optimization opportunities and prevent fraud.</li>
+                        <li>Built and mentored team of 5+ performance marketing specialists, establishing clear playbooks and SOPs for autonomous pod-based operations.</li>
+                        <li>Achieved 25%+ improvement in campaign profitability through systematic funnel optimization and affiliate performance management.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-top">
+                        <div class="job-company">Greenz Aceleradora de Negocios <span class="job-role">| Media Manager</span></div>
+                        <div class="job-date">Feb 2021 - Jun 2021</div>
+                    </div>
+                    <ul>
+                        <li>Transformed digital marketing performance for emerging DTC businesses, achieving 51% increase in online sales through innovative, consumer-oriented full-funnel acquisition strategies.</li>
+                        <li>Successfully reduced customer acquisition costs by 45% while improving retention rates through data-driven campaign optimization and affiliate partner management.</li>
+                        <li>Managed P&amp;L responsibility for assigned campaigns, demonstrating measurable ROI improvements and profitability gains.</li>
+                        <li>Implemented advanced targeting methodologies and affiliate fraud detection systems to maximize marketing efficiency.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-top">
+                        <div class="job-company">Havas Health &amp; You <span class="job-role">| Media Manager (Contractor) - High-Volume DTC Health &amp; Wellness</span></div>
+                        <div class="job-date">Nov 2020 - Apr 2021</div>
+                    </div>
+                    <ul>
+                        <li>Optimized advertising spend efficiency for high-volume DTC health supplement operations, improving conversion rates by 17% while reducing budget waste by 20%.</li>
+                        <li>Managed P&amp;L for affiliate and influencer marketing campaigns, delivering consistent profitability improvements through data-driven optimization.</li>
+                        <li>Delivered comprehensive performance reports to senior leadership, providing actionable insights for strategic decision-making.</li>
+                        <li>Implemented CRM-based analytics and BigQuery queries to track daily conversions, affiliate performance, and campaign profitability metrics.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-top">
+                        <div class="job-company">VMLY&amp;R <span class="job-role">| Media Manager (Contractor) - Performance Marketing</span></div>
+                        <div class="job-date">Jun 2020 - Nov 2020</div>
+                    </div>
+                    <ul>
+                        <li>Directed performance marketing strategy for major DTC brands, achieving 30% improvement in click-through rates and conversion metrics.</li>
+                        <li>Executed large-scale, multi-platform digital campaigns with precise budget allocation through sophisticated attribution modeling.</li>
+                        <li>Managed affiliate and influencer partnerships to drive high-volume traffic across multiple regions.</li>
+                        <li>Implemented real-time performance tracking and optimization protocols for continuous ROI improvement.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-top">
+                        <div class="job-company">OKF Studio <span class="job-role">| Media Coordinator</span></div>
+                        <div class="job-date">Jul 2019 - Jun 2020</div>
+                    </div>
+                    <ul>
+                        <li>Orchestrated digital and traditional media planning for international DTC brands, optimizing investment strategies for maximum reach and impact.</li>
+                        <li>Led and mentored team of 5+ media analysts, fostering analytical thinking and data-driven decision-making culture.</li>
+                        <li>Developed comprehensive media plans addressing business needs and consumer insights across multiple channels.</li>
+                        <li>Managed affiliate relationships and performance tracking for high-volume e-commerce operations.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-top">
+                        <div class="job-company">Sioux Group <span class="job-role">| Senior Performance Media Analyst</span></div>
+                        <div class="job-date">Jul 2018 - Jul 2019</div>
+                    </div>
+                    <ul>
+                        <li>Designed and executed targeted paid media campaigns for high-volume DTC operations, increasing lead conversions by 25% through strategic audience segmentation.</li>
+                        <li>Conducted comprehensive A/B testing initiatives to identify optimization opportunities and improve campaign performance.</li>
+                        <li>Implemented advanced analytics frameworks to track daily conversions and affiliate performance metrics.</li>
+                        <li>Managed affiliate partnerships and monitored fraud indicators across multiple traffic sources.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-top">
+                        <div class="job-company">Google Brazil <span class="job-role">| Google AdWords Specialist</span></div>
+                        <div class="job-date">Nov 2013 - Nov 2016</div>
+                    </div>
+                    <ul>
+                        <li>Optimized and managed Google Ads accounts for diverse client portfolio, ensuring consistent performance improvement and ROI maximization.</li>
+                        <li>Developed performance marketing strategies for high-volume e-commerce clients.</li>
+                        <li>Implemented advanced targeting and bidding strategies to improve campaign efficiency.</li>
+                        <li>Provided strategic recommendations based on data analysis and performance trends.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="section">
+                <div class="section-label">Education</div>
+                <div class="edu">
+                    <div class="edu-top">
+                        <div class="edu-degree">MBA in Digital Media</div>
+                        <div class="edu-date">2018 - 2020</div>
+                    </div>
+                    <div class="edu-school">Universidade Anhembi Morumbi | Graduated with honors</div>
+                </div>
+                <div class="edu">
+                    <div class="edu-top">
+                        <div class="edu-degree">Bachelor's Degree in International Relations</div>
+                        <div class="edu-date">2012 - 2015</div>
+                    </div>
+                    <div class="edu-school">Universidade Anhembi Morumbi</div>
+                </div>
+            </div>
+
+            <!-- Core Competencies -->
+            <div class="section">
+                <div class="section-label">Core Competencies</div>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <h4>Leadership &amp; Team Building</h4>
+                        <p>Team Building &amp; Scaling (6-10+ direct reports), High-Performance Team Leadership &amp; Delegation, Recruitment, Training &amp; Retention, SOPs Development, Pod-Based Organizational Structure, 24/7/365 Coverage Management</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Performance Marketing Expertise</h4>
+                        <p>P&amp;L Ownership &amp; Campaign Profitability, Affiliate Marketing Management (At-Scale), Influencer Traffic Management (High-Volume), DTC Performance Marketing (Health Supplements, Consumer Goods), Multi-Region Offer Management, A/B Testing &amp; Funnel Optimization, Payment Routing &amp; Conversion Optimization, Affiliate Fraud Detection &amp; Prevention</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Data &amp; Technology</h4>
+                        <p>AI Tools Integration &amp; Automation, CRM Data Analysis &amp; Optimization, BigQuery Complex Query Development, Campaign Performance Analytics, Real-Time Data-Driven Decision Making, Attribution Modeling &amp; Tracking, KPI Reporting &amp; Strategic Insights</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Traffic Sources &amp; Channels</h4>
+                        <p>Affiliate Network Management, Influencer Marketing at Scale, Performance Marketing Strategy, High-Volume E-Commerce Operations, Multi-Platform Campaign Execution</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Skills & Tools -->
+            <div class="section">
+                <div class="section-label">Technical Skills &amp; Tools</div>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <h4>Performance Marketing Platforms</h4>
+                        <p>Affiliate Network Management Systems, Influencer Marketing Platforms, CRM Systems (Advanced), BigQuery (Complex Query Development), AI Analytics Tools, Attribution Modeling Platforms</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Analytics &amp; Reporting</h4>
+                        <p>Google Analytics (Advanced), Adobe Analytics, Custom Dashboard Development, Real-Time Performance Tracking, KPI Reporting &amp; Dashboards, Data Visualization</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Advertising Platforms</h4>
+                        <p>Affiliate Networks (Deep Experience), Influencer Marketing Channels, Performance Marketing Platforms, Multi-Channel Campaign Management, Programmatic Media</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Business Intelligence &amp; Data</h4>
+                        <p>BigQuery SQL Queries, CRM Data Analysis, Fraud Detection &amp; Prevention, Attribution Analysis, Conversion Tracking, Real-Time Analytics</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Languages -->
+            <div class="section">
+                <div class="section-label">Languages</div>
+                <div class="lang-list">
+                    <div class="lang-item">English <span class="lang-level">- Fluent (Professional)</span></div>
+                    <div class="lang-item">Portuguese <span class="lang-level">- Native</span></div>
+                    <div class="lang-item">Spanish <span class="lang-level">- Conversational</span></div>
+                </div>
+            </div>
+
+            <!-- Professional Attributes -->
+            <div class="section">
+                <div class="section-label">Professional Attributes</div>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <h4>Data-First Operator</h4>
+                        <p>Assertive, decisive leader who leads with data and proven results.</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>P&amp;L Accountability</h4>
+                        <p>Full ownership of campaign profitability and ROI metrics.</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Executive Presence</h4>
+                        <p>Polished, concise communicator capable of holding ground in data-driven conversations.</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Resilience &amp; Agility</h4>
+                        <p>Thrives in high-pressure environments where thousands of dollars are at stake hourly.</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Team Builder</h4>
+                        <p>Proven ability to recruit, train, and lead high-performing teams in fast-paced environments.</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Systems Thinker</h4>
+                        <p>Establishes reliable systems, playbooks, and SOPs for autonomous team execution.</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Problem Solver</h4>
+                        <p>Quick resolution of operational issues in 24/7/365 e-commerce environments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <span class="logo-sm">MintAds</span>
+            <span class="conf">Confidential</span>
+        </div>
+    </div>
+</body>
+</html>
